@@ -1,0 +1,65 @@
+<div class="main_content">
+    <!-- <section class="container">
+        <h1 class="text-bold text-primary mt-4">My Booking</h1>
+    </section> -->
+    <section *ngIf="this.loaded $$ this.loggedIn"class="main_section mt-3 mb-5">
+        <div class="container">
+            <div class="prop-tabs bookinghistory-tabs" id="target1">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item pr-3"><a class="nav-link active show" id="pills-about-tab"
+                        data-toggle="pill" href="#pills-currentbooking" role="tab" aria-controls="pills-currentbooking"
+                        aria-selected="false">Current Booking</a>
+                    </li>
+                    <li class="nav-item pr-3"><a class="nav-link" id="pills-upcommingbooking-include-tab" data-toggle="pill"
+                        href="#pills-upcommingbooking-include" role="tab" aria-controls="pills-upcommingbooking-include"
+                        aria-selected="false">Upcomming Booking</a>
+                    </li>
+                    <li class="nav-item pr-3"><a class="nav-link" id="pills-pastbooking-tab" data-toggle="pill"
+                            href="#pills-pastbooking" role="tab" aria-controls="pills-pastbooking"
+                            aria-selected="true">Past Booking</a>
+                    </li>
+                    <li class="nav-item pr-3"><a class="nav-link" id="pills-cancelledbooking-tab" data-toggle="pill"
+                        href="#pills-cancelledbooking" role="tab" aria-controls="pills-cancelledbooking"
+                        aria-selected="true">Cancelled Booking</a>
+                    </li>
+
+                </ul>
+                <div class="tab-content" id="pills-tabContent" >
+
+                    <!-- ------------------------Upcomming Booking TAB----------- -->
+                    <div class="tab-pane fade" id="pills-upcommingbooking-include" role="tabpanel"
+                        aria-labelledby="pills-upcommingbooking-include-tab">
+                        <app-bookinglist [bookingDetails]="upcommingBookingDetails"></app-bookinglist>
+                    </div>
+                    <!-- ------------------------//Upcomming Booking TAB---------------->
+
+                    <!-- ------------------------currentbooking TAB------------------------->
+                    <div class="tab-pane fade active show" id="pills-currentbooking" role="tabpanel"
+                        aria-labelledby="pills-currentbooking-tab">
+                        <app-bookinglist [bookingDetails]="currentBookingDetails"></app-bookinglist>
+                    </div>
+                    <!-- ------------------------currentbooking TAB----------------------- -->
+
+                    <!-- ------------------------past booking TAB-------------------------->
+                    <div class="tab-pane fade" id="pills-pastbooking" role="tabpanel"
+                        aria-labelledby="pills-pastbooking-tab">
+                        <app-bookinglist [bookingDetails]="pastBookingDetails"></app-bookinglist>
+                    </div>
+                    <!-- ------------------------pastbooking TAB----------- -->
+
+                    <!-- ------------------------cancelled booking TAB-------------------------->
+                    <div class="tab-pane fade" id="pills-cancelledbooking" role="tabpanel"
+                        aria-labelledby="pills-cancelledbooking-tab">
+                        <app-bookinglist [bookingDetails]="cancelledBookingDetails"></app-bookinglist>
+                    </div>
+                    <!-- ------------------------cancelledbooking TAB----------- -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="text-center">
+        <h2 *ngIf="!this.loggedIn" class="mx-auto p-5 text-muted"><strong>Please Login</strong></h2>
+        <app-loader *ngIf="this.loading" [loaderTitle]="loaderTitle" ></app-loader>
+        <app-error  class="mx-auto" (reload)="this.tryAgain()" *ngIf="this.error && !loading"></app-error>
+    </div>
+</div>

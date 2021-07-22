@@ -1,0 +1,79 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import * as fromLocation from './../../../store/selectors/location.selectors';
+import { LocationRepository } from '../../../store/repositories/location.repository';
+import { Location } from 'src/app/store/models/location';
+import { LoadCurrentLocation } from '../../../store/actions/location.actions';
+import { takeWhile } from 'rxjs/operators';
+
+@Component({
+  selector: 'app-hostellocation',
+  templateUrl: './hostellocation.component.html',
+  styleUrls: ['./hostellocation.component.css']
+})
+export class HostellocationComponent implements OnInit {
+
+  @Input()  locationname:string | undefined;
+  @Input()  address:string | undefined;
+
+  constructor(private LocationRepository: LocationRepository ,private activatedRoute: ActivatedRoute, private router: Router,private store: Store<any>) { }
+
+  loading:boolean=false;
+  loaded:boolean=false;
+  error:boolean=false;
+  isAlive:boolean=false;
+  locationid:number | undefined;
+  gender:string | undefined;
+  location:Location | undefined ;
+
+  ngOnInit(): void {
+    this.isAlive=true;
+    this.locationid = Number(this.activatedRoute.snapshot.paramMap.get('locationid'));
+    this.gender = String(this.activatedRoute.snapshot.paramMap.get('gender'));
+    this.getLocation(this.locationid);
+  }
+
+  ngOnDestroy(): void{
+    this.isAlive=false;
+  }
+
+  gohostelbooking(){
+    /// this.router.navigate(['/hostel']);
+     this.router.navigate(['/booking/'+this.locationid+'/'+this.gender]);
+     this.store.dispatch(new LoadCurrentLocation({currentdata:this.location?this.location:new Location()}));
+   }
+
+   getLocation(id:number) {
+
+    const location$ = this.store.select(fromLocation.getLocation(id));
+    //const location$ = this.store.select(fromLocation.getCurrentLocation);
+    const loading$ = this.store.select(fromLocation.getLocationLoading);
+    const loaded$ = this.store.select(fromLocation.getLocationLoaded);
+    const error$ = this.store.select(fromLocation.getError);
+    
+    location$.pipe(takeWhile(() => this.isAlive)).subscribe(location => {
+      this.location = location;
+    });
+
+    loading$.pipe(takeWhile(() => this.isAlive)).subscribe(data => {
+      this.loading = data;
+    });
+    loaded$.pipe(takeWhile(() => this.isAlive)).subscribe(data => {
+      this.loaded = data;
+    });
+    error$.pipe(takeWhile(() => this.isAlive)).subscribe(data => {
+      this.error = data;
+    });
+
+    if(!this.loading && !this.loaded){
+      this.tryAgain();
+    }
+
+  }
+
+  tryAgain() {
+    this.LocationRepository.getLocationsList(true);
+  }
+
+}

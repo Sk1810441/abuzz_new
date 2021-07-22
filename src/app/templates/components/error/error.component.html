@@ -1,0 +1,11 @@
+<div class="container p-5">
+    <div class="row">
+        <img class="mx-auto" src="./../../../../assets/customimage/error_icon.png" width="25" height="25" alt="loader" >
+    </div>
+    <div class="row">
+        <span class="mx-auto text-danger"><strong>{{errorTitle || 'Error Occured!'}}</strong></span>
+    </div>
+    <div class="row">
+        <button class="btn btn-primary mx-auto" (click)="reload.next()" >Try Again</button>
+    </div>
+</div>

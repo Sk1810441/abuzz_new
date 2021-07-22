@@ -1,0 +1,73 @@
+<div class="">
+    <div class="modal-dialog modal-lg modal-width">
+      <div class="modal-content border-0">
+
+        <div class="d-flex flex-wrap">
+
+          <div class="col-md-6 col-sm-6 p-0  d-sm-block">
+
+            <div class="login-bg colored-bg">
+              <button type="button" class="close d-block d-sm-none" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <img class="login-logo" src="./../../../../assets/images/abuzzOC_logo_login.png" width="140" alt="abuzz_oc-logo">
+              <h3>Hey there!</h3>
+              <p>Login now, and find your favorite residence.</p>
+              <img class="img-man_bk d-sm-block d-none" src="../../../assets/customimage/man.png"
+                alt="man-icon">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <button type="button" class="close d-none d-sm-block" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="login-section">
+
+              <!-- <h2>Login</h2> -->
+              <h6 class="mt-1">Login with</h6>
+              <p class="mb-4 mt-2">
+                <img src="../../../assets/customimage/facebook.svg" alt="fb-icon"
+                  class="facebook">
+                <img src="../../../assets/customimage/google.svg" alt="google-icon"
+                  class="google">
+              </p>
+              <hr class="mb-4">
+              <span id="signin_msg" style="color: red;font-size: 12px;font-family: SharpSansNo1-Book"></span>
+              <form class="form-group your-mail formvalidation" method="post" id="signin_form">
+                <label for="exampleInputEmail1">or use your email/phone number </label>
+                <div class="form-group">
+                  <input type="text" name="email" id="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Email or phone number" required
+                    data-bv-notempty-message="The username is required">
+                  <span id="mobile_msg" style="color: red;font-size: 12px;font-family: SharpSansNo1-Book"></span>
+                </div>
+                <a href="javascript:void(0)" id="emailHelp" class=" text-forgot  mt-2 float-right" data-toggle="modal"
+                  data-target="#signupv2">Forgot Password?</a>
+                <div class="form-group">
+                  <input type="password" name="password" id="password" class="form-control mt-3"
+                    id="exampleInputPassword1" placeholder="Password" required
+                    data-bv-notempty-message="password is required">
+                </div>
+                <div class="form-group">
+                  <span id="signin_msg" style="color: red;font-size:12px;"></span>
+                </div>
+                <!--  onclick="signin()" -->
+
+                <div class="text-center sign-in-otp">
+                  <button href="javascript:void(0)" class="mt-1 btn-blue text-center">Login</button>
+                  <span>or</span>
+                  <button type="button" class="mt-3 btn-blue text-center btn-white" onclick="request_otp()"
+                    data-toggle="modal" data-target="#signin-otp-modal" data-dismiss="modal" aria-label="Close"
+                    id="request_signin_otp" disabled>Request OTP</button>
+                </div>
+              </form>
+
+              <p class="no-account mt-4 text-center">Don't have an account? <a href="#" data-toggle="modal"
+                  data-target="#myModalsignup">Sign Up</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

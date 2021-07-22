@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-signinotp',
+  templateUrl: './signinotp.component.html',
+  styleUrls: ['./signinotp.component.css']
+})
+export class SigninotpComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}

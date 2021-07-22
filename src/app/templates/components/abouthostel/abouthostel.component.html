@@ -1,0 +1,24 @@
+<div class="col-md-12 py-4">
+    <h3 class="bold">{{this.locationName}}</h3>
+    <p>{{this.aboutUs}}</p>
+    <div class="row py-3">
+        <div class="col-md-4 locations">
+            <h4>Location:</h4>
+            <p>{{this.address}}</p>
+            <h4>Available for:</h4>
+            <ng-container  *ngFor="let genderlist of this.genderlist">
+                <!-- <p *ngIf="genderlist == 'M' || genderlist == 'm'"><img src="../../../../assets/customimage/boy.svg" class="mt-1 mr-2 align-top">Boys</p>
+                <p *ngIf="genderlist == 'F' || genderlist == 'f'"><img src="../../../../assets/customimage/girl.svg" class="mt-1 mr-2 align-top">Girls</p> -->
+                <span *ngIf="genderlist == 'M' || genderlist == 'm'" class="mr-3 d-inline-block male_span"><img src="../../../../assets/customimage/boy.png" class="mt-1 mr-2 align-top">Male</span>
+                <span *ngIf="genderlist == 'F' || genderlist == 'f'" class="mr-3 d-inline-block female_span"><img src="../../../../assets/customimage/girl.png" class="mt-1 mr-2 align-top">Female</span>
+            </ng-container>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div id="map">
+                    <iframe style="width: 100%; height: 100%;" [src] ="locationurl"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

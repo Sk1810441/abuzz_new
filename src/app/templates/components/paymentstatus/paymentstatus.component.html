@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <section class="payment_success">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                <img src="../../../../assets/images/abuzzOC_logo.png" width="240" height="160" class="img-fluid payment_logo" style="margin-top: 50px;"/>
+                <h1 class="my-4 font-weight-bold" [ngClass]=" status ? 'text-success' : 'text-danger'">Payment  {{status?"Successful":"Failed"}}</h1>
+                   <!-- <i [ngClass]=" status ? 'fa fa-check-circle' : 'fa fa-close'" aria-hidden="true"></i> -->
+                   <img class="img-fluid m-2 pb-3" width="60" height="60" src=" {{status?'../../../../assets/customimage/check-circle.png':'../../../../assets/customimage/close.png'}}">
+                   <p class="pb-4"> {{status?"Your payment is received. Your booking will be confirmed soon.":"An error occurred while handling your payment or you cancelled it."}} </p>
+                    <h4 class="align-center">We are redirecting please wait or</h4>
+                    <h4 class="align-center">Click <a class="text-primary" style="cursor: pointer;">here</a> to go to Booking history page </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

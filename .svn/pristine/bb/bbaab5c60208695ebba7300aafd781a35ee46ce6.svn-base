@@ -1,0 +1,39 @@
+<!-- <div id="carouselExampleIndicators{{this.uniqueid}}{{gender}}" #myCarousel class="carousel slide sold-out-opacity-class_bk" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li *ngFor="let imagesList of this.imagesList; index as i" [attr.data-target]="'#carouselExampleIndicators' + this.uniqueid+gender" [attr.data-slide-to]="i" [ngClass]="{'active' : i == 0}"></li>
+    </ol>
+    <div class="carousel-inner yllw">
+        <span *ngIf="gender == 'F' || gender == 'f'" class="badge boy-yllw">
+            <img src="../../../../assets/customimage/girl.svg" class="align-top mr-1">Girls
+        </span>
+        <span   *ngIf="gender == 'M' || gender == 'm'"  class="badge boy-yllw">
+            <img src="../../../../assets/customimage/boy.svg" class="align-top mr-1">Boys
+        </span> 
+        <div *ngFor="let imagesList of this.imagesList;index as i" class="carousel-item" [ngClass]="{'active' : i == 0}">
+            <img  style="max-height: 300px;" class="d-block w-100" src="./../../../../assets/customimage/imageloader.gif" jpPreload="{{imagesList}}" fallback="./../../../../assets/customimage/not-found.png" />
+        </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleIndicators{{this.uniqueid}}{{gender}}" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators{{this.uniqueid}}{{gender}}" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a> 
+</div> -->
+
+<carousel [interval]="this.delay" [isAnimated]="true" [noPause] = "this.pause" (mouseover)="start(1)" (mouseout)="start(0)">
+    <slide *ngFor="let imagesList of this.imagesList">
+        <ng-container  *ngFor="let genderlist of this.genderlist">
+            <span *ngIf="genderlist == 'M'"  class="badge boy-yllw gendericon male_span">
+                <img src="../../../../assets/customimage/boy.png" class="align-top mr-1">Boys
+            </span> 
+            <span *ngIf="genderlist == 'F'"   class="badge boy-yllw gendericon girl_badge female_span" >
+                <img src="../../../../assets/customimage/girl.png" class="align-top mr-1">Girls
+            </span>
+        </ng-container>
+        <img  style="max-height: 300px;" class="d-block w-100" src="./../../../../assets/customimage/imageloader.gif" jpPreload="{{imagesList}}" fallback="./../../../../assets/customimage/not-found.png" alt="second slide" style="display: block; width: 100%;">
+    </slide>
+</carousel>

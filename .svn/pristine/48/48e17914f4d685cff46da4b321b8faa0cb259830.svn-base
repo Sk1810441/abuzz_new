@@ -1,0 +1,54 @@
+<div>
+    <div class="modal-dialog modal-lg modal-width">
+      <div class="modal-content border-0">
+
+        <div class="d-flex flex-wrap">
+
+          <div class="col-md-6 col-sm-6 p-0">
+
+            <div class="login-bg">
+              <img class="login-logo" src="https://oxfordcaps.com/assets-website/images/oxford-logo.png"
+                alt="oxfor-logo">
+              <h3>Hi there!</h3>
+              <p>Login to help us find<br> you an ideal home.</p>
+              <img class="img-man" src="https://oxfordcaps.com/assets-website/images/man.png" alt="man-icon">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="login-section">
+
+              <h2>OTP</h2>
+              <h6 class="mt-4" id="signin_otp_number">Please type the OTP send to +919666******</h6>
+              <div class="form__width ">
+                <div class="loader_wrap1">
+                  <div class="loader1"></div>
+                </div>
+                <div class="form-group your-mail p-0 mt-5">
+                  <form class="needs-validation">
+                    <label for="exampleInputEmail1">Enter OTP</label>
+                    <!-- <input type="password" class="form-control mt-3" id="exampleInputPassword1" placeholder="Password" required=""> -->
+                    <input type="text" class="form-control mt-3" id="pincode-input1">
+                    <div class="otp-error" style="color: red;font-size: 12px;font-family: SharpSansNo1-Book"></div>
+                    <div class="signup-error" style="color: red;font-size: 12px;font-family: SharpSansNo1-Book"></div>
+                    <!--                  <p class="otp_timer pt-4" id="timer">00:44</p>-->
+                    <div class="timer text-center pt-3"><span class="otp_timer" id="stimer"></span></div>
+                    <!-- data-toggle="modal" data-target="#myModalsignup" -->
+                    <button id="verify-otp-btn" class="btn-blue btn__blue mt-5 border-0" onclick="verifysigninOtp()"
+                      type="button">Verify</button>
+                  </form>
+                </div>
+
+                <p class="no-account mt-3 text-center"><button class="border-0 " onclick="resend_request_otp()"
+                    id="sbtn-resendotp" disabled>Resend Code</button></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>

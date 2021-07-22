@@ -1,0 +1,33 @@
+<div >
+    <div class="modal-dialog modal-lg modal-width">
+      <div class="modal-content border-0 ">
+
+        <div class="d-flex flex-wrap">
+          <div class="col-md-6 col-sm-6 p-0">
+            <div class="login-bg">
+              <img class="login-logo" src="https://oxfordcaps.com/assets-website/images/oxford-logo.png" alt="log">
+              <h3>Hi there!</h3>
+              <p>Login to help us find<br> you an ideal home.</p>
+              <img class="img-man" src="https://oxfordcaps.com/assets-website/images/man.png" alt="man-icon">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+            <div class="login-section pt-md-5 mt-5">
+              <h3>Account created Successfully</h3>
+              <button type="button" class="mt-5 btn-blue text-center" data-toggle="modal"
+                data-target="#myModal">LOGIN</button>
+
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>

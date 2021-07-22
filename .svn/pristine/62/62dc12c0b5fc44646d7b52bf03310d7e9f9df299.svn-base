@@ -1,0 +1,53 @@
+<div class="row border rounded mt-1">
+    <div class="col-md-12 pt-3 pb-3">
+        <div class="table-responsive">
+            <table *ngIf="guests.length!=0" id="upcommingbooking" class="table table-striped table-bordered dt-responsive nowrap table-sm" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Guest Name</th>
+                        <th *ngIf="!canaddguest">Bed Number</th>
+                        <th>Bed Type</th>
+                        <th *ngIf="canaddguest">Action</th>
+                    </tr>
+                </thead>
+
+                <tbody *ngIf="canaddguest">
+                    <tr *ngFor="let guest of guests; index as i">
+                        <td>{{guest.bookingId}}</td>
+                        <td *ngIf="(guest.bookingStatus=='0' || guest.bookingStatus=='7')">
+                            <select class="form-control"  #selectGuest (change)='onOptionsSelected(selectGuest.value)' >
+                                <option value="">Select Guest</option>
+                                <option *ngFor="let userContact of userContacts "  [selected]="guest.contactId == userContact.id ? true : null" value="{{userContact.id}}" >{{userContact.name}}</option>
+                            </select>
+                        </td>
+                        <td>{{guest.bedTypeName}}</td>
+                        <td ><button *ngIf="(guest.bookingStatus=='0' || guest.bookingStatus=='7')" type="button" (click)="attachtobooking(guest)" class="btn btn-primary mr-1">Attach to Booking</button>
+                            <button *ngIf="guest.bookingStatus=='0' || guest.bookingStatus=='7'" type="button" (click)="cancelBooking(guest)" class="btn btn-primary">Cancel Booking</button></td>
+                        
+                       
+                    </tr>
+                </tbody>
+
+                <tbody *ngIf="!canaddguest">
+                    <tr *ngFor="let guest of guests; index as i">
+                        <td>097645324453-{{i+1}}</td>
+                        <td>{{guest.name}}</td>
+                        <td>{{guest.bedNumber}}</td>
+                        <td>{{guest.bedTypeName}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <div *ngIf="guests.length==0" class="text-center">
+                <h2 class="my-1 text-muted">No Guest Present.</h2>
+            </div>
+        </div>
+        <div *ngIf="canaddguest" class="add_more text-right">
+            <a href="#" data-toggle="modal" data-target="#createguest"><i class="plus_icon">+</i> Add More Guest</a>
+        </div>
+    </div>
+</div>
+
+
+<app-addguest></app-addguest>

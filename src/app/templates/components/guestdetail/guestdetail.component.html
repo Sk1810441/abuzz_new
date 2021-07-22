@@ -1,0 +1,85 @@
+<app-fullscreenloader [isLoading]="isLoading"></app-fullscreenloader>
+<div class="col-md-12 pt-3 pb-3">
+    <h1 class="datail_title">Guest Details</h1>
+    <form class="custom_form">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Check-In & Check-out</label>
+                <input type="text" placeholder="Check-In & Check-out" class="form-control" bsDaterangepicker [bsConfig]="{ isAnimated: true, rangeInputFormat: 'MMM DD,YYYY', showWeekNumbers: false, containerClass: 'theme-red'}" [minDate]="minDate" (bsValueChange)="dateRange($event)"  >
+            </div>
+            <!-- <div class="form-group col-md-6">
+                <label class="col-md-4">No. Of Nights</label>
+                <input id="noofnights" type="text" class="form-control" [(ngModel)]="noOfNights"
+                [ngModelOptions]={standalone:true} disabled>
+            </div> -->
+            <div class="form-group col-md-2">
+                <label class="d-block">No. of Nights</label>
+                <div class="custom_btn">
+                  <!-- <button id="minus" class="btn btn-danger rounded-0">−</button> -->
+                  <input type="text" id="noofnights" class="form-control text-center px-2" [(ngModel)]="noOfNights"
+                  [ngModelOptions]={standalone:true} disabled />
+                  <!-- <button id="plus" class="btn btn-success rounded-0">+</button> -->
+                </div>
+            </div>
+            <div class="form-group col-md-3 gender"  *ngIf="noOfNights">
+                <label class="d-block">Select Gender</label>
+                <ng-container *ngFor="let genderlist of this.genderlist">
+                  <div class="checkbox check_tag">
+                    <label>
+                      <input #genderradio (change)="genderChange()" [(ngModel)]="bookingfor" type="radio" name="genderRadios" value="{{genderlist}}">
+                      <span *ngIf="genderlist == 'M' || genderlist == 'm'" class="tag_name">Boy</span>
+                      <span *ngIf="genderlist == 'F' || genderlist == 'f'" class="tag_name">Girl</span>
+                    </label>
+                  </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="form-row"  *ngIf="noOfNights && bookingfor">
+            <div class="form-group col-sm-12"  >
+                <label class="d-block"> Select No of guest</label>
+                <ng-container  *ngFor="let x of guestSeat">
+                    <div class="checkbox check_tag">
+                      <label>
+                        <input  #guestno (change)="noOfGuest(x.id)" [(ngModel)]="guestCount" type="radio" name="optionsRadios" [value]="x.id">
+                        <span class="tag_name">{{x.id}}</span>
+                      </label>
+                    </div>
+                </ng-container>
+              </div>
+        </div>
+        <!-- <div  *ngIf="noOfNights" class="form-row mb-3">
+            <label class="col-md-2 pt-2">No of guest</label>
+            <select class="form-control col-md-4 " #guestno (change)="Guestcount(guestno.value)" [(ngModel)]="guestCount" [ngModelOptions]={standalone:true}>
+                <option value="0">-Select-</option>
+                <option *ngFor="let x of guestSeat" [value]="x.id">{{x.id}}</option>
+            </select>
+        </div> -->
+        <div class="form-row">
+            <label class="col-12" *ngIf="guestCount && noOfNights">Select guest bed type</label>
+        </div>    
+        <div class="form-row p-1" *ngFor="let GuestNumber of GuestNumber">
+            <label class="col-md-2 pt-2">Guest {{GuestNumber}}</label>
+            <select class="form-control col-md-4" #bedType (change)="GuestBedType(bedType.value,GuestNumber,1)">
+                <option  *ngFor="let currentbedTypesList of currentbedTypesList" value="{{currentbedTypesList.id}}">{{currentbedTypesList.bedTypeName}}</option>
+            </select>
+            <div class="form-group col-md-4">
+                <p class="pt-2 text-danger text-font-bold">
+                    <ng-container *ngFor="let GuestNumberArray of GuestNumberArray">
+                        <ng-container *ngIf="GuestNumberArray.GuestNumber == GuestNumber">
+                            <ng-container *ngFor="let bookingPaymentsInfo of Billing?.bookingPaymentsInfo">
+                                <ng-container *ngIf="GuestNumberArray.bedTypeId == bookingPaymentsInfo.bookingPayment?.bedTypeId" >
+                                    {{bookingPaymentsInfo.bookingPayment?.ratePerNight? '&#8377;'+ bookingPaymentsInfo.bookingPayment?.ratePerNight +" per night":"Beds are not available. Please modify your search"}} 
+                                </ng-container>
+                            </ng-container>
+                        </ng-container>
+                    </ng-container>
+        
+                </p>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" (click)="openbedimageslider(GuestNumber)">View Image</button>
+            </div>
+        </div>
+    </form>
+</div>
+

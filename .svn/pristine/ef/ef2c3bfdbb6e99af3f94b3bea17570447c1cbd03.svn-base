@@ -1,0 +1,19 @@
+airPayReq.setCurrency(wrequest.getParameter("currency"));
+		airPayReq.setIsocurrency(wrequest.getParameter("isocurrency"));
+		airPayReq.setOrderid(wrequest.getParameter("orderid"));
+		airPayReq.setPrivatekey(wrequest.getParameter("privatekey"));
+		airPayReq.setChecksum(wrequest.getParameter("checksum"));
+		airPayReq.setMercid(wrequest.getParameter("mercid"));
+		airPayReq.setBuyerEmail(wrequest.getParameter("buyerEmail"));
+		airPayReq.setBuyerPhone(wrequest.getParameter("buyerPhone"));
+		airPayReq.setBuyerFirstName(wrequest.getParameter("buyerFirstName"));
+		airPayReq.setBuyerLastName(wrequest.getParameter("buyerLastName"));
+		airPayReq.setBuyerAddress(wrequest.getParameter("buyerAddress"));
+		airPayReq.setBuyerCity(wrequest.getParameter("buyerCity"));
+		airPayReq.setBuyerState(wrequest.getParameter("buyerState"));
+		airPayReq.setBuyerCountry(wrequest.getParameter("buyerCountry"));
+		airPayReq.setBuyerPinCode(wrequest.getParameter("buyerPinCode"));
+		airPayReq.setAmount(wrequest.getParameter("amount"));
+wrequest.getParameter("source")
+Long userId=Long.parseLong(wrequest.getParameter("userId"));
+		String jwtToken=wrequest.getParameter("jwtToken");

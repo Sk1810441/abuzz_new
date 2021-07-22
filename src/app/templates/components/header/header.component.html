@@ -1,0 +1,56 @@
+<header class="bg-white position-relative">
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img src="../../../../assets/images/abuzzOC_logo.png" alt="logo"class="img-fluid">
+    </a>
+    <button class="navbar-toggler hamberger-clr" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav right ml-lg-auto align-items-center">
+        <!-- <li class="nav-item title">
+            <a class="nav-link why teal-color" href="https://oxfordcaps.com/whyoxfordcaps">Why Oxfordcaps</a>
+          </li> -->
+        <!-- <li class="nav-item title">
+          <a class="nav-link why teal-color" routerLink="/">University Partners</a>
+        </li> -->
+        <li class="nav-item title">
+          <a class="nav-link why" href="tel:+91 7009007227">
+            <img class="pr-1 phone-icon" src="../../../../assets/customimage/ring-1.svg">+91 7009007227</a>
+        </li>
+        <li class="nav-item title">
+          <a class="nav-link why" routerLink="/location">
+            <img class="pr-1 phone-icon" src="../../../../assets/customimage/map-header.svg">Location</a>
+        </li>
+        <!-- <li class="nav-item  caret pt-2 location_space d-flex ">
+          <img src="../../../../assets/customimage/map-header.svg">
+          <div class="form-group mb-0 drp-bg-img">
+            <select class="form-control-selective-selective  mb-0 nice_select">
+              <option value="">Location</option>
+            </select>
+          </div>
+        </li> -->
+        <li class="nav-item title">
+          <ng-container *ngIf="!status">
+            <a  (click)="openLoginModal()" class="nav-link why" style="cursor: pointer;">
+              <!-- <img src="../../../../assets/customimage/profile-icon.svg" class="pr-3">Log in -->
+              Log in
+            </a>
+          </ng-container>
+          <ng-container *ngIf="status">
+            <!-- <a  (click)="Logout()" class="nav-link why" style="cursor: pointer;">
+              <img src="../../../../assets/customimage/profile-icon.svg" class="pr-1">Logout
+            </a> -->
+            <a [routerLink]="['/profile']" class="nav-link why" style="cursor: pointer;">
+              <img src="../../../../assets/customimage/profile-icon.svg" class="pr-1">{{(username && username !='null' && username!="") ? ( username | titlecase ) :'Profile' }}
+            </a>
+          </ng-container>
+          
+          <!-- <a  [routerLink]="['/login']" class="nav-link why">
+            <img src="../../../../assets/customimage/profile-icon.svg" class="pr-3">Log in
+          </a> -->
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

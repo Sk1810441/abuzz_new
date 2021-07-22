@@ -1,0 +1,67 @@
+<ng-container  *ngIf="this.loaded && this.datafound">
+    <div class="wrapper">
+        <div class="main_content">
+            <section class="main_section mt-3">
+                <div class="container">
+                    <div class="row box_modal pt-2 pb-2 m-0">
+                        <div class="bg-ccc col-md-7">
+                            <app-carousel [imagesList]="this.imagesList" [uniqueid]="this.location?.id" [genderlist]="this.location?.gendersAvailable"></app-carousel>
+                        </div>
+                        <div class="bg-ccc col-md-5">
+                        <!-- <app-hostellocation [locationname]="this.location?.locationName" [address]="this.location?.address1"></app-hostellocation>         -->
+                            <ul class="list-group terraces p-4">
+                                <li class="list-group-item">
+                                    <h3 class="h_3 bold">{{this.location?.locationName}}</h3>
+                                </li>
+                                <li class="list-group-item mb-3 p-sec">{{this.location?.address1}}</li>
+                            </ul>
+                            <div class="booking_btn">
+                                <button (click)="gohostelbooking()" class="btn-bg-blue mt-2 text-center my-2 my-sm-0">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prop-tabs mt-4 box_modal p-3 mb-4" id="target1">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item px-2">
+                                <a class="nav-link active show" id="pills-prop-include-tab" data-toggle="pill" href="#pills-prop-include" role="tab" aria-controls="pills-prop-include" aria-selected="false">Features</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link" id="pills-rooms-tab" data-toggle="pill" href="#pills-rooms" role="tab" aria-controls="pills-rooms" aria-selected="false">Rooms/Beds</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link" id="pills-neighbourhood-tab" data-toggle="pill" href="#pills-neighbourhood" role="tab" aria-controls="pills-neighbourhood" aria-selected="false">Neighbourhood</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link " id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="true">About</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                          
+                            <div class="tab-pane fade active show" id="pills-prop-include" role="tabpanel" aria-labelledby="pills-prop-include-tab">
+                                <app-hostelfeatures [addonAmenitiesMetadatas]="this.location?.addonAmenitiesMetadatas"></app-hostelfeatures>
+                            </div>
+                            <div class="tab-pane fade" id="pills-rooms" role="tabpanel" aria-labelledby="pills-rooms-tab">
+                                <app-hostelrooms [genderlist]="this.location?.gendersAvailable" [bedTypesList]="this.location?.bedTypesList" [imagesList]="this.imagesList" [tariffList]="this.location?.tariffList"></app-hostelrooms>
+                            </div>
+                            <div class="tab-pane fade" id="pills-neighbourhood" role="tabpanel" aria-labelledby="pills-neighbourhood-tab">
+                                <app-hostelneighbourhood [googleMapURL]="this.location?.googleMapURL" [nearByList]="this.location?.nearByList"  [locationName]="this.location?.locationName"></app-hostelneighbourhood>
+                            </div>
+                            <div class="tab-pane fade " id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
+                                <app-abouthostel  [googleMapURL]="this.location?.googleMapURL" [genderlist]="this.location?.gendersAvailable" [address]="this.location?.address1" [locationName]="this.location?.locationName" [aboutUs]="this.location?.aboutUs"></app-abouthostel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</ng-container>
+
+<div class="text-center" *ngIf="!datafound && this.loaded" >
+    <h2 class="mx-auto p-5"><strong>Room not found</strong></h2>
+</div>
+<div class="text-center">
+    <app-loader *ngIf="this.loading" [loaderTitle]="loaderTitle" ></app-loader>
+    <app-error  class="mx-auto" (reload)="this.tryAgain()" *ngIf="this.error && !loading"></app-error>
+</div>
+

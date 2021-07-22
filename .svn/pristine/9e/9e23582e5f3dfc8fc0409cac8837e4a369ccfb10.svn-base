@@ -1,0 +1,11 @@
+<div class="container-fluid pt-3">
+    <div class="row">
+        <ng-container  *ngFor="let location of locations ;" >
+            <app-hostelcard  class="col-md-4  hostelcard"
+                *ngIf="gotolocationcard(location)" 
+                [location]="location">
+            </app-hostelcard>
+        </ng-container>
+        <h2 *ngIf="!isfound" class="mx-auto p-5"><strong>Room not found</strong></h2>
+    </div>
+</div>

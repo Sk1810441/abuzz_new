@@ -1,0 +1,4 @@
+<div class="container p-5">
+    <div class="loader"></div>
+    <h3><strong>{{loaderTitle || 'Loading...'}}</strong></h3> 
+</div>

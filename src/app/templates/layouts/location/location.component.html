@@ -1,0 +1,18 @@
+<ng-container  *ngIf="this.loaded" >
+    <app-locationfilter 
+        (getfiltercity)="getfiltercity($event)" 
+        (getfilterlocation)="getfilterlocation($event)"
+        (getfiltergender)="getfiltergender($event)">
+    </app-locationfilter>
+</ng-container>
+<app-hostellist 
+    [filtercity]="this.filtercity" 
+    [filterlocation]="this.filterlocation"
+    [filtergender]="this.filtergender"
+    [locations]="this.locations">
+</app-hostellist>
+
+<div class="text-center">
+    <app-loader *ngIf="this.loading" [loaderTitle]="loaderTitle" ></app-loader>
+    <app-error  class="mx-auto" (reload)="this.tryAgain()" *ngIf="this.error && !loading"></app-error>
+</div>

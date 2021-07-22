@@ -1,0 +1,68 @@
+<div class="row rounded h-100 bg-white profile_right">
+    <div class="col-md-12 pt-3 pb-3">
+        <div class="row">
+            <div class="col-md-7">
+               <h3 class="text-danger">{{userDetails?.profileSatus == 'sandbox' ? 'You are a sandbox user':''}}</h3> 
+            </div>
+            <div class="col-md-7">
+                
+                <h1 class="datail_title">Profile Details</h1>
+            </div>
+            <div class="col-md-5 text-right">
+                <button type="button" class="btn-bg-blue btn_line edit_btn text-center"  (click)="edit()">
+                    <span class="edit_icon">
+                        <img src="../../../../assets/customimage/pen.png" alt="edit" class="img-fluid" />
+                    </span>Edit</button></div>
+        </div>
+        <ul class="profile_content" >
+            <li>
+                <div class="profile_data">
+                   
+                    <span class="profile_name">Name</span>
+                    <span class="profile_name_data">{{userDetails?.name}}</span>
+                </div>
+            </li>
+            <li>
+                <div class="profile_data">
+                    <span class="profile_name">Email</span>
+                    <span class="profile_name_data">{{userDetails?.email}}</span>
+                </div>
+            </li>
+            <li>
+                <div class="profile_data">
+                    <span class="profile_name">Mobile No.</span>
+                    <div *ngIf="msisdn ; else mobile">
+                        <span class="profile_name_data">+{{userDetails?.msisdn}}</span>
+                    </div>
+                    <ng-template #mobile> 
+                        <span class="profile_name_data">-</span>
+                    </ng-template>
+                </div>
+            </li>
+            <li>
+                <div class="profile_data">
+                    <span class="profile_name">Gender</span>
+                    <div *ngIf="gender; else gen">
+                        <span class="profile_name_data">{{userDetails?.gender =='M'? 'Male':'Female'}}</span>
+                    </div>
+                    <ng-template #gen>
+                        <span class="profile_name_data">-</span>
+                    </ng-template>
+                </div>
+            </li>
+            <li>
+                <div class="profile_data">
+                    <span class="profile_name">DOB</span>
+                    <div *ngIf="dob; else Dob">
+                        <span class="profile_name_data">{{userDetails?.dob| date: 'MMM d, y'}}</span> 
+                    </div>
+                    <ng-template #Dob>
+                        <span class="profile_name_data">-</span> 
+                    </ng-template>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+

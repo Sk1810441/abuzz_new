@@ -1,0 +1,62 @@
+<div class="modal-dialog modal-lg modal-width">
+  <div class="modal-content border-0">
+    <div class="d-flex flex-wrap">
+      <div class="col-md-6 col-sm-6 p-0 ">
+        <div class="login-bg h-100 colored-bg">
+          <img class="login-logo" src="./../../../../assets/images/abuzzOC_logo_login.png" width="140" alt="abuzz_oc-logo">
+          <h3>Hey there!</h3>
+          <p>Login now, and find your favorite residence.</p>
+          <img class="img-man_bk d-sm-block d-none" src="../../../../assets/customimage/man.png" alt="man-icon">
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <button type="button" (click)="modalRef.hide()" class="close d-none d-sm-block" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="login-section">
+          <h2 class="mt-0 d-sm-block d-none">Sign Up </h2>
+          <h4 class="mt-4">Sign up with</h4>
+          <p class="mb-4 mt-2">
+            <img  src="../../../../assets/customimage/facebook.svg" alt="fb-icon" class="facebook">
+            <img  src="../../../../assets/customimage/google.svg" alt="google-icon" class="google">
+          </p>
+          <hr class="mb-4">
+          <form class="form-group your-mail formvalidation custompadding">
+            <label for="exampleInputEmail1">or create a profile </label>
+            <div class="form-group">
+              <input type="text" class="form-control  mt-3" name="firstname" id="firstname" [(ngModel)]="userfirstname" placeholder="Enter your First name" [formControl]="firstname">
+              <span class="text-danger error_message_font_size"  *ngIf="firstname.invalid && firstname.touched">{{getErrorMessagefirstname()}}</span>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control mt-3" name="lastname" id="lastname" [(ngModel)]="userlastname" placeholder="Enter your Last name" [formControl]="lastname">
+              <span class="text-danger error_message_font_size"  *ngIf="lastname.invalid && lastname.touched">{{getErrorMessagelastname()}}</span>
+            </div>
+            <!-- <div class="form-group visit"> -->
+              <div class="form-group your-mail p-0 mt-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text no_code">+91</div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Enter your phone number" [(ngModel)]="userphoneno" [formControl]="phoneno">
+                  </div>
+                  <span class="text-danger error_message_font_size"  *ngIf="phoneno.invalid && phoneno.touched">{{getErrorMessagephoneno()}}</span>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="signupemail" placeholder="Enter your email address"  [(ngModel)]="usergmail" [formControl]="gmail" >  
+              <span class="text-danger error_message_font_size"  *ngIf="gmail.invalid && gmail.touched">{{getErrorMessagegmail()}}</span>   
+            </div>
+            <!-- <div class="form-group">
+              <input type="password" class="form-control mt-3" name="signuppassword"  placeholder="Password" required >
+            </div> -->
+            <p class="signup-terms mt-4">By Signing up, you agree<br> with Oxfordcaps  <a >Terms and Conditions</a></p>
+            <div class="text-center"> 
+              <button type="button" (click)="signUp()" class="btn  text-white btn-blue mt-3">Sign UP</button> 
+            </div>
+          </form>
+          <p class="no-account mt-4 mb-5 text-center">Already have an account? <a (click)="openLoginModel()">Log in</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,41 @@
+import { Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BsModalService } from 'ngx-bootstrap/modal';
+
+import { profileDetails } from 'src/app/store/models/userprofile';
+import { DataService } from 'src/app/store/services/data.service';
+import { EditProfileComponent } from '../edit-profile/edit-profile.component';
+
+
+
+@Component({
+  selector: 'app-userdetail',
+  templateUrl: './userdetail.component.html',
+  styleUrls: ['./userdetail.component.css']
+})
+export class UserdetailComponent implements OnInit {
+
+  @Input() userDetails: profileDetails | undefined;
+  modalRef: any;
+  gender:string|undefined;
+  dob:string|undefined;
+  msisdn:string|undefined;
+  constructor(private modalService: BsModalService, private dataService: DataService) { }
+
+  ngOnInit(): void {
+    if (this.userDetails) {
+      this.dataService.updatedData(this.userDetails);
+    }
+    this.gender=this.userDetails?.gender;
+    this.dob=this.userDetails?.dob;
+    this.msisdn=this.userDetails?.msisdn;
+  }
+  edit() {
+    this.modalRef = this.modalService.show(EditProfileComponent);
+    this.modalRef.content.modalRef = this.modalRef;
+    this.modalRef.content.userDetails = this.userDetails;
+  }
+}
+
+
+

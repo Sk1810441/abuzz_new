@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-12">
+        <table *ngIf="bookingDetails.length!=0" class="table table-striped table-bordered dt-responsive nowrap table-sm" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Booking Date</th>
+                    <th>Check-In Date</th>
+                    <th>Check-Out Date</th>
+                    <th>No. of Guest</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let bookingDetail of bookingDetails">
+                    <tr app-bookingdetaillist  [bookingDetail]="bookingDetail"></tr>
+                </ng-container>
+            </tbody>
+        </table>
+        <div *ngIf="bookingDetails.length==0" class="text-center">
+            <h3 class="my-1 text-muted">No Booking Present.</h3>
+        </div>
+    </div>
+</div>

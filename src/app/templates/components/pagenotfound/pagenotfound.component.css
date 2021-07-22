@@ -1,0 +1,11 @@
+.container-fluid{
+    background-image: url(../../../../assets/customimage/pagenotfoundimage.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 91vh;
+    min-width: 100%;
+  }
+  .btnpostion{
+    margin-top: 300px;
+  }
