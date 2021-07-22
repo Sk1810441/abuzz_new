@@ -14,19 +14,19 @@
         <div class="textCheckout col-md-6"><small>{{billingsummary?.TotalNights ? billingsummary?.TotalNights : '----'}}</small></div>
     </div>
     <div class="row no-gutters border-bottom pb-2">
-        <div class="summary-head col-md-6"><small class="summary-title">Total Beds</small>:</div>
+        <div class="summary-head col-md-6"><small class="summary-title">Total Charge</small>:</div>
         <div class="textCheckout col-md-6"><small>{{billingsummary?.TotalBeds ? billingsummary?.TotalBeds : '----'}}</small></div>
     </div>
     <div class="row no-gutters border-bottom pb-2">
-        <div class="summary-head col-md-6"><strong class="summary-title font-weight-bold">Bed Fare</strong></div>
+        <div class="summary-head col-md-6"><strong class="summary-title font-weight-bold">Booking Amount</strong></div>
         <div class="summary-price col-md-6"> {{billingsummary?.BedAmount ? (billingsummary?.BedAmount | currency) : '----'}}</div>
     </div>
     <div class="row no-gutters border-bottom pb-2">
-        <div class="summary-head col-md-6"><strong class="summary-title font-weight-bold">Security Deposite</strong></div>
+        <div class="summary-head col-md-6"><strong class="summary-title font-weight-bold">Security(Refundable)</strong></div>
         <div class="summary-price col-md-6"> {{billingsummary?.securityDepositeAmount ? (billingsummary?.securityDepositeAmount | currency) : '----'}}</div>
     </div>
     <div class="row no-gutters">
-        <div class="summary-head col-md-6"><strong class="summary-title font-weight-bold">Total Fare</strong></div>
+        <div class="summary-head col-md-6"><strong class="summary-title font-weight-bold">Total Amount</strong></div>
         <div class="summary-price col-md-6">  {{billingsummary?.TotalFareAmount ? (billingsummary?.TotalFareAmount | currency) : '----'}}</div>
     </div>
     <div class="row no-gutters mb-0">

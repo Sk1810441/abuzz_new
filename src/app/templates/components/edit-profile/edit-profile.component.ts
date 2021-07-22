@@ -11,7 +11,6 @@ import { EncryDecryUtility } from 'src/app/utils/encry&decry-utility';
 import { environment } from 'src/environments/environment';
 import * as fromProfile from '../../../store/selectors/profile.selectors';
 import { DatePipe } from '@angular/common';
-import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 
 
 @Component({
@@ -31,11 +30,10 @@ export class EditProfileComponent implements OnInit, OnDestroy {
   error: boolean = false;
   form = new FormGroup({});
 
-  constructor(private profileRespo: profileRepository, private authService: AuthService, private store: Store, private datepipe: DatePipe,private bs: BsDatepickerConfig) { }
+  constructor(private profileRespo: profileRepository, private authService: AuthService, private store: Store, private datepipe: DatePipe) { }
   ngOnInit(): void {
     this.isAlive = true;
     const getProfileData$ = this.store.select(fromProfile.getProfileDetails);
-
     getProfileData$.pipe(takeWhile(() => this.isAlive)).subscribe(data => {
       this.userDetails = data;
     });

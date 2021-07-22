@@ -19,7 +19,7 @@ const routes: Routes = [
 
   { path: '', component: HomeComponent },
   
-  { path: 'location', component: LocationrouterComponent ,  data: { breadcrumb: 'Location'},
+  { path: 'location', component: LocationrouterComponent ,  data: { breadcrumb: 'Locations'},
     children : [ 
       {path: '', component: LocationComponent , data: { breadcrumb: 'Location'} },
       {path: 'hostel/:locationid', component: HostelrouterComponent , data: { breadcrumb: 'Hostel'},

@@ -31,7 +31,7 @@
             <li>
                 <div class="profile_data">
                     <span class="profile_name">Mobile No.</span>
-                        <span class="profile_name_data">{{userDetails?.msisdn ? '+91'+userDetails?.msisdn : '-'}}</span>
+                    <span class="profile_name_data">{{userDetails?.msisdn ? '+91'+(userDetails?.msisdn | slice:-10 ): '-'}}</span>
                 </div>
             </li>
             <li>

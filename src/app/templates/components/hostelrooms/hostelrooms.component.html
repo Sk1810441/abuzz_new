@@ -34,9 +34,11 @@
                                 <li>
                                     <p>Starting from</p>
                                     <ng-container *ngFor="let tariffList of tariffList;">
-                                        <h4 *ngIf="tariffList.bedTypeId == bedTypesList.id && tariffList.tariffType == 'monthly'">₹ {{tariffList.effRate}} <span>/ Night</span></h4>
+                                        <h4 *ngIf="tariffList.bedTypeId == bedTypesList.id && tariffList.tariffType == 'monthly'">₹ {{tariffList.effRate}} <span>/ Bed *</span></h4>
                                     </ng-container>
+                                    <p>*Rates are for per night</p>
                                 </li>
+                               
                                 <li class="pl-5 avalability">
                                     <div class="">
                                         <p *ngIf="true" class="mt-2 text-center my-2 my-sm-0 avail_status">Available</p>
@@ -44,9 +46,10 @@
                                     </div>
                                   
                                 </li>
+                                
                             </ul>
                         </div>
-                        <p class="p-2" style="color: red;font-weight:bold;"> * Availablity shown is from {{today | date: 'MMM dd,YYYY'}} to {{tomorrow | date: 'MMM dd,YYYY'}} for details click on Available</p>
+                        <p class="p-2" style="color: red;font-weight:bold;"> * Availablity shown is from {{today | date: 'MMM dd,YYYY'}} to {{tomorrow | date: 'MMM dd,YYYY'}} </p>
                     </div>
                 </div>
             </div>

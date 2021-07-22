@@ -77,7 +77,7 @@ export class BookingguestdetailsComponent implements OnInit {
     this.bookindService.attachtobooking(obj,Number(this.userid)).subscribe(
       data => {
         if(data.statusDescription.statusCode == 200){
-          this.toastr.success("Attach sucessfully", '', { timeOut: 5000,});
+          this.toastr.success("Attached sucessfully", '', { timeOut: 5000,});
         }else{
           this.toastr.error(data.statusDescription.statusMessage, '', { timeOut: 5000,});
         }
