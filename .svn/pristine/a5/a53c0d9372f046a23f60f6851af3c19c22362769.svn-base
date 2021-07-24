@@ -1,0 +1,39 @@
+::ng-deep .multiselect-dropdown .dropdown-btn .selected-item {
+    max-width: 100% !important;
+    background-color: #fff !important;
+    border: none !important;
+    color: #495057 !important;
+}
+::ng-deep .multiselect-dropdown .dropdown-btn {
+    border-radius: 25px !important;
+    background-color: #fff;
+    color: #495057;
+}
+::ng-deep .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret {
+    line-height: 22px !important;
+}
+::ng-deep .multiselect-dropdown .dropdown-btn .selected-item a {
+    color: #ff0000 !important;
+    padding-left: 10px !important;
+    display: none;
+}
+
+::ng-deep .singleselect .multiselect-item-checkbox {
+    padding: 0px !important;
+}
+::ng-deep .singleselect input[type=checkbox]+div:before {
+    display: none;
+}
+    
+::ng-deep .singleselect input[type=checkbox]+div:after {
+    display: none;
+}
+    
+::ng-deep .singleselect input[type=checkbox]+div {
+    padding: 6px 10px !important;
+}
+    
+::ng-deep .singleselect input[type=checkbox]:checked+div {
+    background-color: #337ab7 !important;
+    color: #fff !important;
+}

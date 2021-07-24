@@ -1,0 +1,37 @@
+<app-fullscreenloader [isLoading]="isLoading"></app-fullscreenloader>
+<div class="modal-dialog modal-lg modal-width">
+    <div class="modal-content border-0">
+        <div class="d-flex flex-wrap">
+            <div class="col-md-6 col-sm-6 p-0">
+                <div class="login-bg">
+                    <img class="login-logo" src="./../../../../assets/images/abuzzOC_logo_login.png" width="140" alt="abuzz_oc-logo">
+                    <h3>Hi there!</h3>
+                    <p>Login to help us find<br> you an ideal home.</p>
+                    <img class="img-man_bk d-sm-block d-none" src="../../../../assets/customimage/man.png" alt="man-icon">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <button type="button"  (click)="modalRef.hide()"  class="close d-none d-sm-block" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="login-section">
+                    <h2>OTP</h2>
+                    <h6 class="mt-4">Please type the OTP send to +91{{msisdn?msisdn:"**********"}}</h6>
+                    <div class="form__width ">
+                        <div class="form-group your-mail p-0 mt-3">
+                            <input type="text" class="form-control mt-3" placeholder="Enter OTP" [(ngModel)]="otp" [formControl]="otpvalidation">
+                            <div class="timer_otp"> <span id="timer">
+                                <img src="../../../../assets/customimage/otp_timer.png" />
+                            </span></div>
+                            <div>Time left = <span id="timer"></span></div>
+                            <button class="btn-blue btn__blue mt-3 border-0" (click)="verifyOTP()" type="button">Verify</button>
+                        </div>
+                        <p class="no-account mt-3 text-center"><button class="border-0" (click)="resendOTP()">Resend Code</button></p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

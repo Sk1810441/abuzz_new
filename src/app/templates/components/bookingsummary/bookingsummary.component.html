@@ -1,0 +1,62 @@
+<app-fullscreenloader [isLoading]="isLoading"></app-fullscreenloader>
+<div class="summary-block border p-4 rounded">
+    <h2 class="title_bar">BOOKING SUMMARY</h2>
+    <div class="row no-gutters">
+        <div class="summary-head col-md-6"><small class="summary-title">Check-In</small>:</div>
+        <div class="textCheckout col-md-6"><small>{{billingsummary?.CheckIn ? (billingsummary?.CheckIn | date: 'EEE, MMM dd,YYYY') : '----'}}</small></div>    
+    </div>
+    <div class="row no-gutters">
+        <div class="summary-head col-md-6"><small class="summary-title">Check-out</small>:</div>
+        <div class="textCheckout col-md-6"><small>{{billingsummary?.Checkout ? (billingsummary?.Checkout | date: 'EEE, MMM dd,YYYY') : '----'}}</small></div>
+    </div>
+    <div class="row no-gutters">
+        <div class="summary-head col-md-6"><small class="summary-title">Total Nights</small>:</div>
+        <div class="textCheckout col-md-6"><small>{{billingsummary?.TotalNights ? billingsummary?.TotalNights : '----'}}</small></div>
+    </div>
+    <div class="row no-gutters border-bottom pb-2">
+        <div class="summary-head col-md-6"><small class="summary-title"> No of Guest(s)</small>:</div>
+        <div class="textCheckout col-md-6"><small>{{billingsummary?.TotalBeds ? billingsummary?.TotalBeds : '----'}}</small></div>
+    </div>
+    <div class="row no-gutters border-bottom pb-2">
+        <div class="summary-head col-md-6"><strong class="summary-title font-weight-bold">Booking Amount</strong></div>
+        <div class="summary-price col-md-6"> {{billingsummary?.BedAmount ? (billingsummary?.BedAmount | currency) : '----'}}</div>
+    </div>
+    <div class="row no-gutters border-bottom pb-2">
+        <div class="summary-head col-md-6"><strong class="summary-title font-weight-bold">Security(Refundable)</strong></div>
+        <div class="summary-price col-md-6"> {{billingsummary?.securityDepositeAmount ? (billingsummary?.securityDepositeAmount | currency) : '----'}}</div>
+    </div>
+    <div class="row no-gutters">
+        <div class="summary-head col-md-6"><strong class="summary-title font-weight-bold">Total Amount</strong></div>
+        <div class="summary-price col-md-6">  {{billingsummary?.TotalFareAmount ? (billingsummary?.TotalFareAmount | currency) : '----'}}</div>
+    </div>
+    <div class="row no-gutters mb-0">
+        <div class="col-md-12">
+            <button type="submit" (click)="paid()" class="btn btn-danger wrn-btn float-right btn-block">Continue</button>
+        </div>
+    </div>
+    <br>
+
+</div>
+<div >
+
+<form hidden #paymentform [action]="payment?.payGW?.paymentURL" method='POST'>
+    <input id="currency"  name="currency" [value]="payment?.payGW?.currency" hidden>
+    <input id="isocurrency"  name="isocurrency" [value]="payment?.payGW?.isocurrency" hidden>
+    <input id="orderid"  name="orderid" [value]="payment?.payGW?.orderid" hidden>
+    <input id="privatekey"  name="privatekey" [value]="payment?.payGW?.privatekey" hidden>
+    <input id="checksum"  name="checksum" [value]="payment?.payGW?.checksum" hidden>
+    <input id="mercid"  name="mercid" [value]="payment?.payGW?.mercid" hidden>
+    <input id="buyerEmail"  name="buyerEmail" [value]="payment?.payGW?.buyerEmail" hidden>
+    <input id="buyerPhone"  name="buyerPhone" [value]="payment?.payGW?.buyerPhone" hidden>
+    <input id="buyerFirstName"  name="buyerFirstName" [value]="payment?.payGW?.buyerFirstName" hidden>
+    <input id="buyerLastName"  name="buyerLastName" [value]="payment?.payGW?.buyerLastName" hidden>
+    <input id="buyerAddress"  name="buyerAddress" [value]="payment?.payGW?.buyerAddress" hidden>
+    <input id="buyerCity"  name="buyerCity" [value]="payment?.payGW?.buyerCity" hidden>
+    <input id="buyerState"  name="buyerState" [value]="payment?.payGW?.buyerState" hidden>
+    <input id="buyerCountry"  name="buyerCountry" [value]="payment?.payGW?.buyerCountry" hidden>
+    <input id="buyerPinCode"  name="buyerPinCode" [value]="payment?.payGW?.buyerPinCode" hidden>
+    <input id="amount"  name="amount" [value]="payment?.payGW?.amount" hidden>
+    <input id="source"  name="source" [value]="source" hidden>
+    <input id="userId"  name="userId" [value]="userid" hidden>
+    <input id="jwtToken"  name="jwtToken" [value]="jwtToken" hidden>
+</form>

@@ -1,0 +1,50 @@
+<div class="row border p-2 rounded">
+    <h3 class="font-weight-bold mb-2 col-md-12">{{bookingstatus?.location}}</h3>
+    <div class="col-md-3 pt-3">
+        <!-- <img [src]="this.bookingstatus.QRImage" alt="QRcode" class="img-fluid" /> -->
+        <img  class="img-fluid" src="./../../../../assets/customimage/imageloader.gif" jpPreload="{{this.bookingstatus?.QRImage}}" fallback="./../../../../assets/customimage/not-found.png" />
+    </div>
+    <div class="bg-ccc col-md-9">
+        <div class="table-responsive">
+            <table class="table table-borderless">
+                <tr>
+                    <th class="font-weight-bold">Booking ID</th><td>{{bookingstatus?.BookingID}}</td>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Booked On</th><td>{{bookingstatus?.BookedOn | date:'EEE, MMM d, y, h:mm:ss a'}}</td>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Status </th>
+                    <ng-container [ngSwitch]="bookingstatus?.Status">
+                    <!-- <td>{{bookingstatus.Status}}</td> -->
+                        <td  *ngSwitchCase='0'>Arrival Due</td>
+                        <td  *ngSwitchCase='1'>In House</td>
+                        <td  *ngSwitchCase='2'>Cancelled</td>
+                        <td  *ngSwitchCase='3'>Departed</td>
+                        <td  *ngSwitchCase='4'>Early Departured </td>
+                        <td  *ngSwitchCase='5'>System Error </td>
+                        <td  *ngSwitchCase='6'>Cancelled by admin </td>
+                        <td  *ngSwitchCase='7'>Pending</td>
+                        <td  *ngSwitchCase='8'>Pending</td>
+                        <td  *ngSwitchCase='9'>Overstayed departured </td>
+                        <td  *ngSwitchCase='10'>No show</td>
+                        <td  *ngSwitchCase='11'>Overstayed</td>
+                        <td  *ngSwitchCase='12'>No show expired</td>
+                        <td  *ngSwitchCase='13'>Expired</td>
+                        <td  *ngSwitchCase='14'>Expired </td>
+                        <td  *ngSwitchCase='15'>Departured Excp (Cash) </td>
+                        <td  *ngSwitchCase='16'>Departured Excp (No Pay) </td>
+                        <td  *ngSwitchDefault>Booking status not available</td>
+                    </ng-container>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Checkin</th><td>{{bookingstatus?.Checkin | date:'EEE, MMM d, y, h:mm:ss a'}}</td>
+                </tr>
+                <tr>
+                    <th class="font-weight-bold">Check out</th><td>{{bookingstatus?.Checkout | date:'EEE, MMM d, y, h:mm:ss a'}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+

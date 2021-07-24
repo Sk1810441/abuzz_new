@@ -1,0 +1,9 @@
+<ul class="list-group terraces p-4">
+    <li class="list-group-item">
+        <h3 class="h_3 bold">{{this.locationname}}</h3>
+    </li>
+    <li class="list-group-item mb-3 p-sec">{{this.address}}</li>
+</ul>
+<div class="booking_btn">
+    <button (click)="gohostelbooking()" class="btn-bg-blue mt-2 text-center my-2 my-sm-0">Book Now</button>
+</div>

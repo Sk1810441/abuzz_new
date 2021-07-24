@@ -1,0 +1,57 @@
+<div class="row border p-2 rounded m-0 box_modal">
+    <h3 class="font-weight-bold mb-3 col-md-12 box_heading">{{bookingstatus?.location}}</h3>
+    <div class="col-md-3">
+        <!-- <img [src]="this.bookingstatus.QRImage" alt="QRcode" class="img-fluid" /> -->
+        <img  class="img-fluid" src="./../../../../assets/customimage/imageloader.gif" jpPreload="{{this.bookingstatus?.QRImage}}" fallback="./../../../../assets/customimage/not-found.png" />
+    </div>
+    <div class="bg-ccc col-md-9">
+        <div class="row m-0 mb-4">
+            <div class="col-md-4">
+                <span class="heading_span">Checkin</span>
+                <span class="date_span">{{bookingstatus?.Checkin | date:'MMM d, y'}}</span>
+                <span class="time_span">{{bookingstatus?.Checkin | date:'EEE, h:mm:ss a'}}</span>
+            </div>
+            <div class="col-md-4">
+                <span class="heading_span">Check Out</span>
+                <span class="date_span">{{bookingstatus?.Checkout | date:'MMM d, y'}}</span>
+                <span class="time_span">{{bookingstatus?.Checkout | date:'EEE, h:mm:ss a'}}</span>
+            </div>
+            <div class="col-md-4">
+                <span class="heading_span">Booked On</span>
+                <span class="date_span">{{bookingstatus?.BookedOn | date:'MMM d, y'}}</span>
+                <span class="time_span">{{bookingstatus?.BookedOn | date:'EEE, h:mm:ss a'}}</span>
+            </div>
+        </div>
+        <div class="row m-0">
+            <div class="col-md-4">
+                <span class="heading_span">Booking ID</span>
+                <span class="date_span">{{bookingstatus?.BookingID}}</span>
+            </div>
+            <div class="col-md-4">
+                <span class="heading_span">Status</span>
+                <ng-container [ngSwitch]="bookingstatus?.Status">
+                    <!-- <td>{{bookingstatus.Status}}</td> -->
+                    <span class="date_span badge badge-info" *ngSwitchCase='0'>Arrival Due</span>
+                    <span class="date_span badge badge-success" *ngSwitchCase='1'>In House</span>
+                    <span class="date_span badge badge-danger" *ngSwitchCase='2'>Cancelled</span>
+                    <span class="date_span badge badge-info" *ngSwitchCase='3'>Departed</span>
+                    <span class="date_span badge badge-info" *ngSwitchCase='4'>Early Departured </span>
+                    <span class="date_span badge badge-danger" *ngSwitchCase='5'>System Error </span>
+                    <span class="date_span badge badge-danger" *ngSwitchCase='6'>Cancelled by admin </span>
+                    <span class="date_span badge badge-warning" *ngSwitchCase='7'>Pending</span>
+                    <span class="date_span badge badge-warning" *ngSwitchCase='8'>Pending</span>
+                    <span class="date_span badge badge-info" *ngSwitchCase='9'>Overstayed departured </span>
+                    <span class="date_span badge badge-info" *ngSwitchCase='10'>No show</span>
+                    <span class="date_span badge badge-warning" *ngSwitchCase='11'>Overstayed</span>
+                    <span class="date_span badge badge-secondary" *ngSwitchCase='12'>No show expired</span>
+                    <span class="date_span badge badge-secondary" *ngSwitchCase='13'>Expired</span>
+                    <span class="date_span badge badge-secondary" *ngSwitchCase='14'>Expired </span>
+                    <span class="date_span badge badge-danger" *ngSwitchCase='15'>Departured Excp (Cash) </span>
+                    <span class="date_span badge badge-danger" *ngSwitchCase='16'>Departured Excp (No Pay) </span>
+                    <span class="date_span badge badge-danger" *ngSwitchDefault>Booking status not available</span>
+                    </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+

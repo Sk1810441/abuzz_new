@@ -1,0 +1,37 @@
+<app-fullscreenloader [isLoading]="isLoading"></app-fullscreenloader>
+<div class="modal-dialog modal-lg modal-width">
+    <div class="modal-content border-0">
+        <div class="d-flex flex-wrap">
+            <div class="col-md-6 col-sm-6 p-0">
+                <div class="login-bg">
+                    <img class="login-logo" src="./../../../../assets/images/abuzzOC_logo_login.png" width="140" alt="abuzz_oc-logo">
+                    <h3>Hi there!</h3>
+                    <p>Login to help us find<br> you an ideal home.</p>
+                    <img class="img-man_bk d-sm-block d-none" src="../../../../assets/customimage/man.png" alt="man-icon">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <button type="button"  (click)="modalRef.hide()"  class="close d-none d-sm-block" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="login-section">
+                  
+                    <h2>Phone Number</h2>
+                    <h6 class="mt-4" id="signin_otp_number">Please type your phone number for get otp</h6>
+                    <div class="form__width ">
+                        <div class="form-group your-mail p-0 mt-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text no_code">+91</div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Enter your phone number" [(ngModel)]="msisdn" [formControl]="phoneno">
+                              </div>
+                            <button class="btn-blue btn__blue mt-3 border-0" (click)="sendOTP()" type="button">Send OTP</button>
+                        </div>
+                        <p class="no-account mt-3 text-center"><button class="border-0 " (click)="openLoginModel()">BACK TO LOGIN</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Oxfordcaps</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="./assets/css/uploadfile.css" >
+    <link rel="stylesheet" type="text/css" href="./assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://oxfordcaps.com/assets-website/css/jquery-ui.css"> 
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap4hack.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/nice-select/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
+    <link rel='stylesheet' type="text/css" href='./assets/css/slick-theme.min.css'>
+    <link rel='stylesheet' type="text/css" href='./assets/css/slick.css'>
+    <link rel='stylesheet' type="text/css" href='./assets/css/custom/slick-theme.min.css'>
+    <link rel='stylesheet' type="text/css" href='./assets/css/custom/slick.css'> 
+    <link rel="stylesheet" type="text/css" href="./assets/css/jquery-ui.css">
+    <link rel='stylesheet' type="text/css" href='./assets/css/custom/jquery.fancybox.min.css'>
+    <link rel='stylesheet' type="text/css" href="./assets/css/bootstrap-datepicker3.min.css" > 
+    <link rel="stylesheet" type="text/css" href="./assets/css/timepicki.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-pincode-input.css">
+    <link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  </head>
+  <body class="">
+    <app-root></app-root>
+  </body>
+  <!-- <script type="text/javascript" src="https://oxfordcaps.com/assets-website/js/custom/jquery-1.12.4.js"></script> -->
+  <script type="text/javascript" src="./assets/javascript/jquery-1.12.4.js"></script>
+  
+ 
+  <script src="https://oxfordcaps.com/assets-website/nice-select/fastclick.js"></script>
+  <script src="https://oxfordcaps.com/assets-website/nice-select/prism.js"></script>
+  <script src="https://oxfordcaps.com/assets-website/nice-select/jquery.nice-select.min.js"></script>
+  <script src="https://oxfordcaps.com/assets-website/js/custom/bootstrap-select.min.js"></script> 
+  <script src="https://oxfordcaps.com/assets-website/js/custom/jquery-ui.min.js"></script> 
+  <!-- <script src="https://oxfordcaps.com/assets-website/js/website.js"></script>
+  <script src="https://oxfordcaps.com/assets-website/js/bootstrap-datepicker.min.js"></script>-->
+  <!-- <script>
+    $(function () {
+      bsCustomFileInput.init();
+    });
+  </script> -->
+ 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+  <!-- <script>
+    var h = document.getElementsByTagName("head")[0];
+    var s = document.createElement("script"); 
+    s.setAttribute("type", "text/javascript")
+    s.async=true;
+    s.setAttribute("src", "http://12.129.211.236/static/chat.js");
+    h.appendChild(s);
+  </script> -->
+
+  </html>

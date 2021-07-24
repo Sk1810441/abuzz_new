@@ -1,0 +1,26 @@
+<ng-container *ngIf="this.loaded">
+    <div class="main_content">
+        <section class="main_section mt-3">
+            <div class="container">
+                <div class="row">
+                    <!-------------------------left side--------------------------->
+                    <div class="col-md-4 mb-5">
+                        <app-userprofile [userName]="this.userDetails?.name" [userImage]="this.userDetails?.profileImageHttp"></app-userprofile>
+                    </div>
+                    <!-------------------------//left side------------------------->
+                    
+                    <div class="col-md-8 mb-5">
+                        <!---------------profile detail section-------------------->
+                        <app-userdetail [userDetails]="this.userDetails"></app-userdetail>
+                        <!---------------profile detail section-------------------->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</ng-container>
+<div class="text-center">
+    <h2 *ngIf="!this.loggedIn" class="mx-auto p-5 text-muted"><strong>Please Login</strong></h2>
+    <app-loader *ngIf="this.loading" [loaderTitle]="loaderTitle"></app-loader>
+    <app-error class="mx-auto" (reload)="this.tryAgain()"  *ngIf="this.error && !loading"></app-error>
+</div>

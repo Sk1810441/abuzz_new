@@ -1,0 +1,67 @@
+<div class="modal-dialog">
+    <form [formGroup]="form" (ngSubmit)="submit(form)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Profile Details</h5>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input formControlName="name" type="text" id="name" placeholder="Enter Name" name="name"
+                                class="form-control" />
+                            <span class="text-danger error_message_font_size"
+                                *ngIf="f.name.touched && f.name.invalid">Name is requied</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>LastName</label>
+                            <input formControlName="lastname" type="text" id="lastname" placeholder="Enter LastName" name="lastname"
+                                class="form-control" />
+                            <span class="text-danger error_message_font_size"
+                                *ngIf="f.lastname.touched && f.lastname.invalid">LastName is requied</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-6 gender">
+                        <label class="d-block">Gender</label>
+                        <div class="checkbox check_tag">
+                            <label>
+                                <input formControlName="gender" type="radio" name="gender" value="M">
+                                <span class="tag_name">Male</span>
+                            </label>
+                        </div>
+                        <div class="checkbox check_tag">
+                            <label>
+                                <input formControlName="gender" type="radio" name="gender" value="F">
+                                <span class="tag_name">Female</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>DOB</label>
+                            <input type="text" id="dob" name="dob"
+                                placeholder="Enter Date Of Birth" class="form-control" bsDatepicker
+                                [bsConfig]="{dateInputFormat: 'MMM DD,YYYY'}" autocomplete="off" formControlName="dob" >
+                            <div *ngIf="f.dob.touched && f.dob.invalid">
+                                <div *ngIf="f.dob.errors?.required">
+                                    <span class="text-danger error_message_font_size"> Date Of Birth is required</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="hide()">Close</button>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+        </div>
+    </form>
+</div>

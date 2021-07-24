@@ -1,0 +1,60 @@
+<div class="rooms">
+    <ul class="nav nav-tabs referral-tabs after-book" id="myTab" role="tablist">
+        <ng-container  *ngFor="let bedTypesList of bedTypesList; index as i">
+            <li class="nav-item">
+                <a [ngClass]="{'active show' : i == 0}" class="nav-link nav-adjusts" id="tab1" data-toggle="tab" href="#{{bedTypesList.id}}" role="tab" aria-controls="home" aria-selected="true">
+                    <div class="text-center">
+                        <!-- <img class="icon-normal" src="https://oxfordcaps.liveabuzz.com/assets-website/images/icons/single.svg">
+                        <img class="icon-white" src="https://oxfordcaps.liveabuzz.com/assets-website/images/icons/single_white.svg"> -->
+                        <img class="black" width="24" height="24"  src="./../../../../assets/customimage/imageloader.gif" jpPreload="{{bedTypesList.image}}" fallback="./../../../../assets/customimage/not-found.png" />
+                        <img class="white" width="24" height="24"  src="./../../../../assets/customimage/imageloader.gif" jpPreload="{{bedTypesList.imageDeactive}}" fallback="./../../../../assets/customimage/not-found.png" />
+                        <p class="tabs-font">{{bedTypesList.bedTypeName}}</p>
+                    </div>
+                </a>
+            </li>
+        </ng-container>
+    </ul>
+</div>
+<div class="tab-content">
+    <ng-container  *ngFor="let bedTypesList of bedTypesList; index as i">
+        <div [ngClass]="{'active show' : i == 0}" class="tab-pane fade" id="{{bedTypesList.id}}" role="tabpanel" aria-labelledby="tab1">
+            <div class="row my-4">
+                <div class="col-md-6">
+                    <div class="room-carousel">
+                        <app-carousel [imagesList]="this.imagesList" [uniqueid]="bedTypesList.id" [genderlist]="this.genderlist"></app-carousel>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-padding">
+                        <div class="room-details">
+                            <h4>{{bedTypesList.bedTypeName}}</h4>
+                        </div>
+
+                        <div class="rooms-bg overflow-hidden" (click)="gobookingpage();"style="cursor: pointer;">
+                            <ul class="rooms-inline position-relative w-100">
+                                <li>
+                                    <p>Starting from</p>
+                                    <ng-container *ngFor="let tariffList of tariffList;">
+                                        <h4 *ngIf="tariffList.bedTypeId == bedTypesList.id && tariffList.tariffType == 'monthly'">₹ {{tariffList.effRate}} <span>/ Bed *</span></h4>
+                                    </ng-container>
+                                    <h6>*Rates are for per night</h6>
+                                </li>
+                               
+                                <li class="pl-5 avalability">
+                                    <div class="">
+                                        <p *ngIf="true" class="mt-2 text-center my-2 my-sm-0 avail_status">Available</p>
+                                        <p *ngIf="false" class="mt-2 text-center my-2 my-sm-0 avail_status avail_not_status">Not Available</p>
+                                    </div>
+                                  
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <p class="p-2" style="color: red;font-weight:bold;"> * Availablity shown is from {{today | date: 'MMM dd,YYYY'}} to {{tomorrow | date: 'MMM dd,YYYY'}} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+

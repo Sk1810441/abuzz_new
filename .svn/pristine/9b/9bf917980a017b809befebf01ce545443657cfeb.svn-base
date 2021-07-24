@@ -1,0 +1,11 @@
+<div class="container-fluid pt-3">
+    <div class="row">
+        <ng-container  *ngFor="let location of filterlocationslist ;" >
+            <app-hostelcard  class="col-md-4  hostelcard"
+                [location]="location">
+            </app-hostelcard>
+        </ng-container>
+        <h2 *ngIf="loaded && !isfound" class="mx-auto p-5"><strong>Room not found</strong></h2>
+    </div>
+</div>
+ <!-- *ngIf="gotolocationcard(location)"  -->

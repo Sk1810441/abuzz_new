@@ -1,0 +1,36 @@
+<div class="row mb-3">
+    <div class="col-md-4">
+        <h3 class="bold color-black">{{this.locationName}}i </h3>
+        <div class="accordion" id="accordionExample">
+            <div class="neighbourhood">
+                <div class="card-header border-bottom-0 pl-0" id="headingOne" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    <h6 class="mb-0 d-flex">
+                        <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/green.svg" class="align-self-center">
+                        <button class="btn btn-link text-dark txt-dec map-loc-head" type="button">Locations nearby</button>
+                        <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/bluedwn-arrow.png" class="align-self-center ml-auto" data-toggle="collapse" data-target="#collapse1" aria-expanded="true">
+                    </h6>
+                </div>
+                <div id="collapse1" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card-body py-0">
+                        <ul class="list-group accordion-list locator1 map-loc-sublist">
+                            <ng-container *ngFor="let nearByList of this.nearByList; index as i">
+                                <li *ngIf="i < 9" class="list-group-item d-flex pr-0" data-latitude="28.751335" data-longitude="77.117530">
+                                    {{nearByList.name}}
+                                    <span class="ml-auto"></span>
+                                </li>
+                            </ng-container>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div id="map">
+                <iframe style="width: 100%; height: 100%;" [src] ="locationurl"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="summary-block border p-4 rounded">
+    <h2 class="title_bar">Payment DETAILS</h2>
+    <div class="row no-gutters border-bottom pb-2">
+        <div class="summary-head col-md-6"><small class="summary-title">Check-In</small>:</div>
+        <div class="textCheckout col-md-6"><small>{{paymentdetails?.Checkin | date:'EEE, MMM d, y'}}</small></div>    
+    </div>
+    <div class="row no-gutters border-bottom pb-2">
+        <div class="summary-head col-md-6"><small class="summary-title">Check-out</small>:</div>
+        <div class="textCheckout col-md-6"><small>{{paymentdetails?.Checkout | date:'EEE, MMM d, y'}}</small></div>
+    </div>
+    <div class="row no-gutters border-bottom pb-2">
+        <div class="summary-head col-md-6"><small class="summary-title">Total Nights</small>:</div>
+        <div class="textCheckout col-md-6"><small> {{paymentdetails?.totalnights}}</small></div>
+    </div>
+    <div class="row no-gutters border-bottom pb-2">
+        <div class="summary-head col-md-6"><small class="summary-title">Booking Amount</small></div>
+        <div class="summary-price col-md-6">{{paymentdetails?.bookingAmount | currency}}</div>
+    </div>
+    <div class="row no-gutters border-bottom pb-2">
+        <div class="summary-head col-md-6"><small class="summary-title">Security (Refundable)</small></div>
+        <div class="summary-price col-md-6">{{paymentdetails?.securityAmount | currency}}</div>
+    </div>
+    <div class="row no-gutters total_sec">
+        <div class="summary-head col-md-6"><strong class="summary-title font-weight-bold">Total Amount</strong></div>
+        <div class="summary-price col-md-6"><strong class="summary-title font-weight-bold">{{paymentdetails?.totalAmount | currency}}</strong></div>
+    </div>
+</div>

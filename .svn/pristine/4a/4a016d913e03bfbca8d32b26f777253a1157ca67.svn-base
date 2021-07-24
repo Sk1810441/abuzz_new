@@ -1,0 +1,24 @@
+.active img{
+    opacity: 1 !important;
+}
+/* .text-center img {
+    display: none; 
+} */
+
+/* .white{
+    display: none;
+} */
+/* .active .white{
+    display: contents;
+} */
+
+.active .black{
+    display: none;
+}
+
+.active .white{
+    display: block;
+}
+/* .active .text-center .white{
+    display:contents;
+} */

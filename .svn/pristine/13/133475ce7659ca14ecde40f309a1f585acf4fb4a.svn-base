@@ -1,0 +1,31 @@
+<div class="main_content">
+    <section class="main_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mb-5">
+                    <app-bookingstatus [bookingstatus]= "this.bookingstatus"></app-bookingstatus>
+                    <!---------------guest detail section-------------------->
+                        <div class="prop-tabs mt-4 bookinghistory-tabs" id="target1">
+                           
+                            <div class="tab-content" id="pills-tabContent" >
+            
+                                
+            
+                                <!-- ------------------------Guest Details TAB------------------------->
+                                <div class="tab-pane fade active show" id="pills-guestDetails" role="tabpanel"
+                                    aria-labelledby="pills-guestDetails-tab">
+                                    <app-bookingguestdetails  [bedCount]="this.bookingsInfo?.bookingDetails?.bedCount" [canaddguest]="this.canaddguest()" [guests]="this.guests"></app-bookingguestdetails>
+                                </div>
+                                <!-- ------------------------Guest Details TAB----------------------- -->
+                            </div>
+                        </div>
+                   
+                    <!---------------guest detail section-------------------->
+                </div>
+                <div class="col-md-4 mb-5">
+                   <app-paymentdetails [paymentdetails]="this.paymentdetails"></app-paymentdetails>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

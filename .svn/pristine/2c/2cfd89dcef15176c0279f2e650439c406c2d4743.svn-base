@@ -1,0 +1,29 @@
+<div class="summary-block h-100 bg-white rounded">
+  <div class="user_profile">
+    <div class="userprofile_img">
+      <img [src]="url" alt="profilepic" class="img-fluid profile_image" />
+      <span class="edit_icon">
+        <img src="../../../../assets/customimage/camera.png" alt="edit" class="img-fluid" />
+      </span>
+      <div class="change_pic">
+        <input type="file" (change)="onFileChanged($event)" class="form-control" title="Edit Profile Image">
+      </div>
+    </div>
+    <div class="userprofile_name">Hello {{userName}}</div>
+  </div>
+  <div class="sidebar_menu_list">
+    <ul class="menu_list">
+      <li>
+        <a class="text-primary" style="cursor: pointer;" (click)="gotobookinghistory()"><img
+            src="../../../../assets/customimage/billing.png" class="img-fluid" alt="billing" /> Booking History</a>
+      </li>
+      <!-- <li>
+            <a [routerLink]="['/profile']"><img src="../../../../assets/customimage/notification.png" class="img-fluid" alt="notification" /> Notifications</a>
+        </li>  -->
+      <li>
+        <a class="text-primary" style="cursor: pointer;" (click)="logout()"><img
+            src="../../../../assets/customimage/profile-icon.svg" class="img-fluid" alt="notification" />Logout</a>
+      </li>
+    </ul>
+  </div>
+</div>

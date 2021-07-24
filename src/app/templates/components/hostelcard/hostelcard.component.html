@@ -1,0 +1,61 @@
+<div class="mb-4 price-card position-relative" data-price="11000">
+    <div class="card property-card ">
+        <app-carousel [imagesList]="this.imagesList" [uniqueid]="this.location?.id" [genderlist]="this.location?.gendersAvailable"></app-carousel>
+        <div *ngIf="!this.location?.isBedAvailable" class="soldout">
+            <h5 class="mb-0"> Sorry, We're Sold out </h5>
+        </div>
+        <div class="bg-section sold-out-opacity-class">
+            <h5> Starting from <strong>&#8377; {{lowestRate}} </strong>/bed </h5>
+        </div>
+
+        <div class="card-body pt-3 border-0 card-eqh">
+            <div class="d-flex flex-wrap flex-xl-nowrap">
+                <div class="mr-auto">
+                    <p class="card-text property-content" style="min-height:100px;">
+                    <span>{{this.location?.locationName}}</span><br>
+                    <small class="rosh pt-0 mt-0 mb-2 d-inline-block">{{this.location?.address1}}</small><br>
+                    <!-- <label>Available from 22 May 2021*</label> -->
+                    </p>
+                </div>
+            </div>
+            <div class="booking_btn">
+                <a (click)="gohostelbooking()">
+                    <button class="btn-bg-blue mt-2 text-center my-2 my-sm-0 float-left">Book Now</button>
+                </a>
+                <a (click)="gohostel()"> 
+                    <button class="btn-bg-blue btn_line mt-2 text-center my-2 my-sm-0  float-right">View details</button>
+                </a>
+            </div>
+        </div>
+        <div class="bg-light">
+            <span class="head-small">Occupancy </span>
+            <div class="d-flex flex-wrap footer-icons" >
+                <ng-container *ngFor="let bedTypesList of this.location?.bedTypesList">
+                    <div *ngIf="(this.bedTypesList.bedFor == 'M' || this.bedTypesList.bedFor == 'm') && this.bedTypesList.bedPosition == '0' " class=" col-sm-6 col-6 col-lg-3">
+                        <div class="text-center occupancy ">
+                            <span class="icon-wrap">
+                                <img  width="24" height="24" src="./../../../../assets/customimage/imageloader.gif" jpPreload="{{bedTypesList.image}}" fallback="./../../../../assets/customimage/not-found.png" />
+                            </span>
+                            <p class="tabs-font">{{bedTypesList.displayName}}</p>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div style="padding: 0 20px 0 20px;">
+                <hr class="b-b mt-0 mb-0">
+            </div>
+            <span class="head-small">Property included</span>
+            <div class="d-flex flex-wrap footer-icons">
+                <div *ngFor="let addonAmenitiesMetadata of this.location?.addonAmenitiesMetadatas; index as i" class="col-md-6 col-sm-6 col-6 col-lg-3">
+                    <div *ngIf="i < 8" class="text-center occupancy">
+                        <span class="icon-wrap">
+                            <img  width="24" height="24" src="./../../../../assets/customimage/imageloader.gif" jpPreload="{{addonAmenitiesMetadata.imagesList}}" fallback="./../../../../assets/customimage/not-found.png" />
+                        </span>
+                        <p class="tabs-font">{{addonAmenitiesMetadata.amenityName}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

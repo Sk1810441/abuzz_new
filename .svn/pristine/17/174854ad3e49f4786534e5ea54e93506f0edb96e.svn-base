@@ -1,0 +1,650 @@
+<div class="banner-1">
+    <div class="banner-shape-color-new"></div>
+      <div class="h-125"></div>
+        <div class="banner-content">
+            <div class="container-fluid banner-paddg">
+          <div class="row w-100 resp-margin">
+             <div class="col-md-7 pt-5 mt-5">
+                <div class="sub-content">
+                    <div class="align-head new-f">
+                    <h1 class="fadeInUp  animated" data-wow-delay=".1s" style="visibility: visible;animation-delay:0.1s;animation-name: fadeInUp;">
+                    <strong class="bold title">Student Living 2.0</strong></h1>
+                    <h5 class="pt-1 think-beyond mb-4 i fadeInUp  animated" style="visibility: visible;animation-delay:0.3s;animation-name: fadeInUp;">Think beyond hostels &amp; PGs!</h5>
+                      
+                     <form action="javascript:void(0)" class="general-form  " method="post" accept-charset="utf-8">
+                  
+                      <div class="d-flex position-relative col-md-10 px-0 fadeInUp   animated search-wrap" style="visibility: visible;animation-delay:0.5s;animation-name: fadeInUp;">
+                        <input autocomplete="off" id="search-box" name="search-box" type="text" class="form-control find-search search-icon" placeholder="Enter City" spellcheck="false" data-ms-editor="true">
+                        <input id="city_name" name="city" type="hidden">
+                            <input id="university_name" name="university" type="hidden">
+                            <div id="suggesstion-box" class="suggestion-box"></div>
+                        <button type="button" onclick="getSearchCities();" class="btn btn-primary btn-find new-find phone-search">Find My Home</button>
+                     </div>
+                     <span style="color: red" id="search-error"></span>
+                     </form>
+                     <!-- <figure class="m-100 fadeInUp  animated ">
+                        <a href="#target1" class="smooth-scroll arrow-animation"><img id="scroll-down"  src="https://oxfordcaps.liveabuzz.com/assets-website/images/scroll-down.png"></a></figure> -->
+                </div>
+             </div>
+             </div>
+             <div class="bg-banner-image-new">
+                   <figure class="fadeInRight animated" style="visibility: visible;animation-delay:0.5s;animation-duration :1s ;animation-name: fadeInRight;">
+                     <a href="#"> <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/bg-banner.png" class="zoomout new-bann" width="700" height="705"></a>
+                  </figure> 
+                 
+             </div>
+        </div>               
+        </div>
+        </div>
+   </div>
+
+   
+
+<section class="" id="target1">
+  <div class="nex px-4 px-md-5 pl-md-5 pr-md-0">
+    <div>
+      <div class="explore-our-homes explore-our-homes-adjust ">
+        <!-- <div class="height-50"></div>  -->
+        <h2 class="strong title fadeInUp  animated wow animated" style="visibility: visible; animation-name: fadeInUp;">
+          <strong class="bold title">Explore our Residences</strong></h2>
+        <p class="para fadeInUp  animated wow mb-0 animated" style="visibility: visible; animation-name: fadeInUp;">Find
+          the accommodation you love near your university. Choose your city and start exploring!</p>
+
+      </div>
+      <section id="features" class=" slider-wrapper m22 location_slider pt-0">
+
+
+        <div class="test-monial-slider-1 mb-2 slick-initialized slick-slider"><button type="button" data-role="none"
+            class="slick-prev slick-arrow slick-disabled" aria-label="Previous" role="button" aria-disabled="true"
+            style="display: block;">Previous</button>
+
+
+          <div aria-live="polite" class="slick-list draggable">
+            <div class="slick-track" style="opacity: 1; width: 45000px; transform: translate3d(0px, 0px, 0px);"
+              role="listbox">
+              <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0"
+                role="option" aria-describedby="slick-slide10" style="">
+                <a href="javascript:void(0)" class="d-block   mx-md-4" tabindex="0">
+                  <div class="d-md-flex  mx-0">
+                    <div class="card mb-4 border-0 outline-0 mx-auto" style="width: 21rem;">
+                      <img class="card-img-top city-card disable-city"
+                        src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cities/35/4316.jpg" alt="Gurgaon">
+                      <div class="card-new p-2 pl-3">
+                        <h5 class="card-title">Gurgaon</h5>
+                        <h3>Coming Soon</h3>
+                        <span class="link">Explore More</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" role="option"
+                aria-describedby="slick-slide11">
+                <a href="https://oxfordcaps.liveabuzz.com/propertylisting/Delhi/All/All/Jun?p=city"
+                  class="d-block   mx-md-4" tabindex="0">
+                  <div class="d-md-flex  mx-0">
+                    <div class="card mb-4 border-0 outline-0 mx-auto" style="width: 21rem;">
+                      <img class="card-img-top city-card "
+                        src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cities/26/2508.jpg" alt="Delhi">
+                      <div class="card-new p-2 pl-3">
+                        <h5 class="card-title">Delhi</h5>
+                        <h3>Starting price <strong>₹ 10,000</strong></h3>
+                        <span class="link">Explore More</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" role="option"
+                aria-describedby="slick-slide12">
+                <a href="https://oxfordcaps.liveabuzz.com/propertylisting/Bangalore/All/All/Jun?p=city"
+                  class="d-block   mx-md-4" tabindex="0">
+                  <div class="d-md-flex  mx-0">
+                    <div class="card mb-4 border-0 outline-0 mx-auto" style="width: 21rem;">
+                      <img class="card-img-top city-card "
+                        src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cities/29/f6c6.jpg" alt="Bangalore">
+                      <div class="card-new p-2 pl-3">
+                        <h5 class="card-title">Bangalore</h5>
+                        <h3>Starting price <strong>₹ 7,000</strong></h3>
+                        <span class="link">Explore More</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="0" role="option"
+                aria-describedby="slick-slide13">
+                <a href="https://oxfordcaps.liveabuzz.com/propertylisting/Dehradun/All/All/Jun?p=city"
+                  class="d-block   mx-md-4" tabindex="0">
+                  <div class="d-md-flex  mx-0">
+                    <div class="card mb-4 border-0 outline-0 mx-auto" style="width: 21rem;">
+                      <img class="card-img-top city-card "
+                        src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cities/28/7b7f.jpg" alt="Dehradun">
+                      <div class="card-new p-2 pl-3">
+                        <h5 class="card-title">Dehradun</h5>
+                        <h3>Starting price <strong>₹ 8,333</strong></h3>
+                        <span class="link">Explore More</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="slick-slide slick-active" data-slick-index="4" aria-hidden="false" tabindex="0" role="option"
+                aria-describedby="slick-slide14">
+                <a href="https://oxfordcaps.liveabuzz.com/propertylisting/Pune/All/All/Jun?p=city"
+                  class="d-block   mx-md-4" tabindex="0">
+                  <div class="d-md-flex  mx-0">
+                    <div class="card mb-4 border-0 outline-0 mx-auto" style="width: 21rem;">
+                      <img class="card-img-top city-card "
+                        src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cities/32/7887.jpg" alt="Pune">
+                      <div class="card-new p-2 pl-3">
+                        <h5 class="card-title">Pune</h5>
+                        <h3>Starting price <strong>₹ 6,500</strong></h3>
+                        <span class="link">Explore More</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="slick-slide slick-active" data-slick-index="5" aria-hidden="false" tabindex="0" role="option"
+                aria-describedby="slick-slide15">
+                <a href="https://oxfordcaps.liveabuzz.com/propertylisting/Greater-Noida/All/All/Jun?p=city"
+                  class="d-block   mx-md-4" tabindex="0">
+                  <div class="d-md-flex  mx-0">
+                    <div class="card mb-4 border-0 outline-0 mx-auto" style="width: 21rem;">
+                      <img class="card-img-top city-card "
+                        src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cities/31/b442.jpg"
+                        alt="Greater Noida">
+                      <div class="card-new p-2 pl-3">
+                        <h5 class="card-title">Greater Noida</h5>
+                        <h3>Starting price <strong>₹ 4,675</strong></h3>
+                        <span class="link">Explore More</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" role="option"
+                aria-describedby="slick-slide16">
+                <a href="https://oxfordcaps.liveabuzz.com/propertylisting/Indore/All/All/Jun?p=city"
+                  class="d-block   mx-md-4" tabindex="-1">
+                  <div class="d-md-flex  mx-0">
+                    <div class="card mb-4 border-0 outline-0 mx-auto" style="width: 21rem;">
+                      <img class="card-img-top city-card "
+                        src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cities/33/0c54.jpg" alt="Indore">
+                      <div class="card-new p-2 pl-3">
+                        <h5 class="card-title">Indore</h5>
+                        <h3>Starting price <strong>₹ 8,000</strong></h3>
+                        <span class="link">Explore More</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" role="option"
+                aria-describedby="slick-slide17">
+                <a href="https://oxfordcaps.liveabuzz.com/propertylisting/Jaipur/All/All/Jun?p=city"
+                  class="d-block   mx-md-4" tabindex="-1">
+                  <div class="d-md-flex  mx-0">
+                    <div class="card mb-4 border-0 outline-0 mx-auto" style="width: 21rem;">
+                      <img class="card-img-top city-card "
+                        src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cities/30/0581.jpg" alt="Jaipur">
+                      <div class="card-new p-2 pl-3">
+                        <h5 class="card-title">Jaipur</h5>
+                        <h3>Starting price <strong>₹ 10,500</strong></h3>
+                        <span class="link">Explore More</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="slick-slide" data-slick-index="8" aria-hidden="true" tabindex="-1" role="option"
+                aria-describedby="slick-slide18">
+                <a href="https://oxfordcaps.liveabuzz.com/propertylisting/Ahmedabad/All/All/Jun?p=city"
+                  class="d-block   mx-md-4" tabindex="-1">
+                  <div class="d-md-flex  mx-0">
+                    <div class="card mb-4 border-0 outline-0 mx-auto" style="width: 21rem;">
+                      <img class="card-img-top city-card "
+                        src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cities/27/5d45.jpg" alt="Ahmedabad">
+                      <div class="card-new p-2 pl-3">
+                        <h5 class="card-title">Ahmedabad</h5>
+                        <h3>Starting price <strong>₹ 10,000</strong></h3>
+                        <span class="link">Explore More</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button"
+            style="display: block;" aria-disabled="false">Next</button>
+        </div>
+
+      </section>
+    </div>
+  </div>
+</section>
+<section class="bg-light px-4 px-md-5">
+    <div class=" community pb-3">
+      <h1 class="pb-2 fadeInUp  animated wow pt-3 animated" style="visibility: visible; animation-name: fadeInUp;"><strong class="bold title">Your Student Life Made Easy</strong></h1>
+        <div class="row mt-2">
+          <div class="col-md-4 easy-made col-12 py-3">
+            <h4>Community</h4>
+            <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/future-icon.svg" class="mt-2 mb-3">
+            <h6>Global Connect</h6>
+            <p class="para">Indian and International Student community</p>
+            
+            <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/clock.svg" class="mt-2 mb-3">
+            <h6>Career &amp; Connections</h6>
+            <p class="para">Events, Mentoring, Internships, brown bag session</p>
+            
+          </div>
+          <div class="col-md-4 easy-made col-12 py-3">
+            <h4>Comfort</h4>
+            <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/ser.svg" class="mt-2 mb-2">
+            <h6>Peace of mind</h6>
+            <p class="para">Healthy Meals, Filtered Water, Night Food, Laundry</p>
+            
+             <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/live.svg" class="mt-2 mb-2">
+            <h6>Lap of love</h6>
+            <p class="para">Comfortable beds, Housekeeping, High Speed Wifi, Microwave, Washing Machine, Clean linen</p>
+          </div>
+         <div class="col-md-4 easy-made col-12 py-3">
+            <h4>Care</h4>
+            <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/secur.svg" class="mt-2 mb-2">
+            <h6>Security</h6>
+            <p class="para">24x7 CCTV Security and Biometric Access</p>
+            
+            <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/onsite.svg" class="mt-2 mb-2">
+            <h6>Wellbeing</h6>
+            <p class="para">Gym, Play Zone, Doctor on call, Medical Insurance, Parent Helpline</p>
+          </div>
+    </div>
+     <div>
+ 
+  </div>
+    </div>
+
+</section>
+<section class=" community explore-our-homes px-5">
+    <h1 class="pt-3 fadeInUp  animated wow" style="visibility: hidden; animation-name: none;"><strong class="bold title">Love, from across the world</strong></h1>
+    <p class="para fadeInUp  animated wow" style="visibility: hidden; animation-name: none;">Our residents across the world, have something to say... </p>
+    <div class=" pb-4 pt-4 test-monial-slider-wrap">
+ <div class="test-monial-slider slick-initialized slick-slider" style="box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.08)"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>
+   
+                     <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 5598px; transform: translate3d(-1244px, 0px, 0px);" role="listbox"><div class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 622px;">
+    <div class="d-flex flex-wrap">
+      <div class="col-sm-12 col-lg-6 p-0 test-img">
+        <img src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cms/whatmembersays/42_file" class="img-fluid" height="548" width="555">
+                           </div>
+       <div class="col-sm-12 col-lg-6 bg-light quote">
+           <div>
+             <figure>
+               <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/quote.png">
+             </figure>
+             <span>
+               <p>My mom was very concerned about food quality, as is the case for most hostels. But Oxfordcaps turned out to be a totally different story with hygienic, FSSAI quality food. Now my parents are very much at peace and feel very positive about my health.</p>
+             </span>
+           
+             <strong class="mt-3">Kaustabh Lahoty</strong>
+             <p> Hans Raj College</p>
+           </div>
+     </div>
+      </div>
+    </div><div class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 622px;">
+    <div class="d-flex flex-wrap">
+      <div class="col-sm-12 col-lg-6 p-0 test-img">
+        <img src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cms/whatmembersays/43_file" class="img-fluid" height="548" width="555">
+                           </div>
+       <div class="col-sm-12 col-lg-6 bg-light quote">
+           <div>
+             <figure>
+               <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/quote.png">
+             </figure>
+             <span>
+               <p>I study in Khalsa college and like every other student I have high ambitions, and a good internship is something that most students struggle with. Oxfordcaps, however, turned out to be much more than a regular hostel. They have an amazing talent recognition program that provides internship opportunities across India and even Singapore!</p>
+             </span>
+           
+             <strong class="mt-3">Garvit Magoo</strong>
+             <p> Shri Guru Tegh Bahadur Khalsa</p>
+           </div>
+     </div>
+      </div>
+    </div><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide00" style="width: 622px;">
+    <div class="d-flex flex-wrap">
+      <div class="col-sm-12 col-lg-6 p-0 test-img">
+        <img src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cms/whatmembersays/39_file" class="img-fluid" height="548" width="555">
+                           </div>
+       <div class="col-sm-12 col-lg-6 bg-light quote">
+           <div>
+             <figure>
+               <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/quote.png">
+             </figure>
+             <span>
+               <p>What I have experienced is that hostels don’t usually care about the maintenance, hygiene or day to day issues. But it’s quite the opposite here. Staff or warden, everyone here is actually happy to help. Whether it’s something as small as plumbing or just getting some extra help with my own stuff, I have always seen happy faces coming forward to rescue.</p>
+             </span>
+           
+             <strong class="mt-3">Mehul Jain</strong>
+             <p> Ramjas College</p>
+           </div>
+     </div>
+      </div>
+    </div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide01" style="width: 622px;">
+    <div class="d-flex flex-wrap">
+      <div class="col-sm-12 col-lg-6 p-0 test-img">
+        <img src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cms/whatmembersays/40_file" class="img-fluid" height="548" width="555">
+                           </div>
+       <div class="col-sm-12 col-lg-6 bg-light quote">
+           <div>
+             <figure>
+               <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/quote.png">
+             </figure>
+             <span>
+               <p>Sending a girl child away from home town is still a big concern for most parents, as hostels barely maintain an entry register. Which is why they chose Oxfordcaps. With their CCTV, and biometric entry system, my folks are free of all insecurities.</p>
+             </span>
+           
+             <strong class="mt-3">Surbhi Mehta</strong>
+             <p> UPES</p>
+           </div>
+     </div>
+      </div>
+    </div><div class="slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 622px;">
+    <div class="d-flex flex-wrap">
+      <div class="col-sm-12 col-lg-6 p-0 test-img">
+        <img src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cms/whatmembersays/41_file" class="img-fluid" height="548" width="555">
+                           </div>
+       <div class="col-sm-12 col-lg-6 bg-light quote">
+           <div>
+             <figure>
+               <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/quote.png">
+             </figure>
+             <span>
+               <p>The common room at Oxfordcaps has so many recreational activities and games. We also have a great gym. The community events that happen from time to time are also engaging and fun. Oxfordcaps offers us so much more than just a room.</p>
+             </span>
+           
+             <strong class="mt-3">Aayush Tickoo</strong>
+             <p> St. Andrews College</p>
+           </div>
+     </div>
+      </div>
+    </div><div class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide03" style="width: 622px;">
+    <div class="d-flex flex-wrap">
+      <div class="col-sm-12 col-lg-6 p-0 test-img">
+        <img src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cms/whatmembersays/42_file" class="img-fluid" height="548" width="555">
+                           </div>
+       <div class="col-sm-12 col-lg-6 bg-light quote">
+           <div>
+             <figure>
+               <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/quote.png">
+             </figure>
+             <span>
+               <p>My mom was very concerned about food quality, as is the case for most hostels. But Oxfordcaps turned out to be a totally different story with hygienic, FSSAI quality food. Now my parents are very much at peace and feel very positive about my health.</p>
+             </span>
+           
+             <strong class="mt-3">Kaustabh Lahoty</strong>
+             <p> Hans Raj College</p>
+           </div>
+     </div>
+      </div>
+    </div><div class="slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide04" style="width: 622px;">
+    <div class="d-flex flex-wrap">
+      <div class="col-sm-12 col-lg-6 p-0 test-img">
+        <img src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cms/whatmembersays/43_file" class="img-fluid" height="548" width="555">
+                           </div>
+       <div class="col-sm-12 col-lg-6 bg-light quote">
+           <div>
+             <figure>
+               <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/quote.png">
+             </figure>
+             <span>
+               <p>I study in Khalsa college and like every other student I have high ambitions, and a good internship is something that most students struggle with. Oxfordcaps, however, turned out to be much more than a regular hostel. They have an amazing talent recognition program that provides internship opportunities across India and even Singapore!</p>
+             </span>
+           
+             <strong class="mt-3">Garvit Magoo</strong>
+             <p> Shri Guru Tegh Bahadur Khalsa</p>
+           </div>
+     </div>
+      </div>
+    </div><div class="slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 622px;">
+    <div class="d-flex flex-wrap">
+      <div class="col-sm-12 col-lg-6 p-0 test-img">
+        <img src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cms/whatmembersays/39_file" class="img-fluid" height="548" width="555">
+                           </div>
+       <div class="col-sm-12 col-lg-6 bg-light quote">
+           <div>
+             <figure>
+               <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/quote.png">
+             </figure>
+             <span>
+               <p>What I have experienced is that hostels don’t usually care about the maintenance, hygiene or day to day issues. But it’s quite the opposite here. Staff or warden, everyone here is actually happy to help. Whether it’s something as small as plumbing or just getting some extra help with my own stuff, I have always seen happy faces coming forward to rescue.</p>
+             </span>
+           
+             <strong class="mt-3">Mehul Jain</strong>
+             <p> Ramjas College</p>
+           </div>
+     </div>
+      </div>
+    </div><div class="slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 622px;">
+    <div class="d-flex flex-wrap">
+      <div class="col-sm-12 col-lg-6 p-0 test-img">
+        <img src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/cms/whatmembersays/40_file" class="img-fluid" height="548" width="555">
+                           </div>
+       <div class="col-sm-12 col-lg-6 bg-light quote">
+           <div>
+             <figure>
+               <img src="https://oxfordcaps.liveabuzz.com/assets-website/images/quote.png">
+             </figure>
+             <span>
+               <p>Sending a girl child away from home town is still a big concern for most parents, as hostels barely maintain an entry register. Which is why they chose Oxfordcaps. With their CCTV, and biometric entry system, my folks are free of all insecurities.</p>
+             </span>
+           
+             <strong class="mt-3">Surbhi Mehta</strong>
+             <p> UPES</p>
+           </div>
+     </div>
+      </div>
+    </div></div></div>
+                      
+                      
+                      
+                      
+                        
+     
+  <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button></div>
+</div>
+</section>
+<section class="explore-sec bg-light ">
+    <div class=" mt-3 nex  pb-3 px-4 px-md-5 pl-md-5 pr-md-0">
+      <h2 class="strong title pt-3 fadeInUp  animated wow" style="visibility: hidden; animation-name: none;"><strong class="bold title">They said it.</strong></h2>
+        <div class="ft"> <p class="para fadeInUp  animated wow" style="visibility: hidden; animation-name: none;">Our friends in the media had some kind things to say.</p></div>
+		<div class="test-monial-slider-1 m10 mt-5 slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow slick-disabled" aria-label="Previous" role="button" aria-disabled="true" style="display: block;">Previous</button>
+                  		                   		<div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 65000px; transform: translate3d(0px, 0px, 0px);" role="listbox"><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide20" style="">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://timesofindia.indiatimes.com/business/india-business/oxfordcaps-forays-into-indonesia-and-malaysia-aims-to-raise-50-mn-funding/articleshow/69523168.cms" tabindex="0"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/15_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Oxfordcaps forays into Indonesia and Malaysia, aims to raise ..</h5>
+                                  <p>Student housing provider Oxfordcaps Monday said it is foraying into Indonesia and</p>
+                                   <h6>01 Nov, 2019</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide21">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://bloncampus.thehindubusinessline.com/entrepreneurship/article27274584.ece/photo/1/" tabindex="0"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/14_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Student housing goes off-campus, gets fancy</h5>
+                                  <p>A clutch of start-ups offers a revamped housing experience for students studying away from home</p>
+                                   <h6>01 Nov, 2019</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div><div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide22">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://www.livemint.com/companies/news/student-pg-accommodation-provider-oxfordcaps-enters-bengaluru-with-5-000-beds-1567070807411.html" tabindex="0"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/13_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Student, PG accommodation provider Oxfordcaps enters Bengaluru with 5,000 beds</h5>
+                                  <p>Oxfordcaps offers fully-fitted out and custom designed residences</p>
+                                   <h6>01 Nov, 2019</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div><div class="slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide23">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://brandequity.economictimes.indiatimes.com/news/marketing/oxfordcaps-partners-student-of-the-year-2/69247987" tabindex="0"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/12_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Oxfordcaps partners with Student of the Year 2</h5>
+                                  <p>Oxfordcaps partners with Student of the Year 2</p>
+                                   <h6>09 May, 2019</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div><div class="slick-slide slick-active" data-slick-index="4" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide24">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://tech.economictimes.indiatimes.com/news/startups/student-housing-company-oxfordcaps-raises-8m-led-by-times-internet/68577708" tabindex="0"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/11_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Inside the co-living</h5>
+                                  <p>I felt I got a lot of personal and flexibility to fit my requirements. Top notch </p>
+                                   <h6>19 Apr, 2019</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div><div class="slick-slide slick-active" data-slick-index="5" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide25">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://m.dailyhunt.in/news/bangladesh/english/news+track+english-epaper-ntrack/oxford+caps+announces+the+launch+of+student+residences+in+the+country-newsid-91779766" tabindex="0"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/10_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Oxford Caps announces the launch of student residences in the country</h5>
+                                  <p>On Saturday, the Oxford Caps which is a well-known market disruptor in the Student Housing Segment allegedly made a declaration regarding its entry into the Indian market and its intention to provide state-of-the-art Student Housing facilities in Delhi NCR.</p>
+                                   <h6>27 Jul, 2018</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div><div class="slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide26">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://economictimes.indiatimes.com/small-biz/startups/newsbuzz/times-internet-leads-8-million-round-in-student-housing-startup-oxfordcaps/articleshow/68590670.cms?from=mdr" tabindex="-1"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/9_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Times Internet leads $8 million round in student housing startup OxfordCaps</h5>
+                                  <p>Oxfordcaps has clocked 30X growth in less than a year and aims to grow its operations across cities like Delhi, Noida, Greater Noida, Dehradun, Indore, Jaipur, Pune, Bengaluru, and Ahmedabad.</p>
+                                   <h6>27 Mar, 2019</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div><div class="slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide27">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://www.thehindubusinessline.com/news/real-estate/student-housing-start-up-oxfordcaps-eyes-dorm-biz/article25866199.ece" tabindex="-1"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/8_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Student housing start-up Oxfordcaps eyes dorm biz</h5>
+                                  <p>Oxfordcaps, a student housing start-up, which entered into India few months back, is all set to introduce a new vertical Oxfordcaps Dorms in May 2019, which is the starting of the next academic year.</p>
+                                   <h6>30 Dec, 2018</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div><div class="slick-slide" data-slick-index="8" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide28">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://www.vccircle.com/times-internet-leads-series-a-round-in-student-housing-startup-oxfordcaps/" tabindex="-1"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/7_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Times Internet leads Series A round in student housing startup OxfordCaps</h5>
+                                  <p>Student accommodation startup Oxfordcaps has raised $8 million (Rs 56 crore as per current exchange rates) in a Series A funding round led by Times Internet, a subsidiary of media house Bennett Coleman and Co. Ltd., a company statement said.</p>
+                                   <h6>26 Mar, 2019</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div><div class="slick-slide" data-slick-index="9" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide29">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://www.businesstoday.in/pti-feed/oxfordcaps-to-expand-presence-in-india/story/306615.html" tabindex="-1"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/6_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Oxfordcaps to expand presence in India</h5>
+                                  <p>Singapore-headquartered Oxfordcaps Thursday said it aims to expand its presence in cities like Indore, Pune and Bengaluru from May onwards as it looks to cash in on the growing opportunity in the student housing segment in India. </p>
+                                   <h6>03 Jan, 2019</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div><div class="slick-slide" data-slick-index="10" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide210">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://www.business-standard.com/article/companies/student-housing-startup-oxfordcaps-raises-8-million-in-series-a-round-119032600424_1.html" tabindex="-1"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/5_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Student housing start-up Oxfordcaps raises $8 million in Series A round</h5>
+                                  <p>Oxfordcaps, a tech-enabled student housing company, has raised $8 million in Series A funding led by Times Internet. Existing investors Kalaari Capital and Silicon Valley-based investor 500 start-ups also participated in this round of funding.</p>
+                                   <h6>26 Mar, 2019</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div><div class="slick-slide" data-slick-index="11" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide211">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://inc42.com/buzz/times-internet-kalaari-bet-8-mn-on-student-housing-startup-oxfordcaps/" tabindex="-1"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/4_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Times Internet, Kalaari Bet $8 Mn On Student Housing Startup Oxfordcaps</h5>
+                                  <p>Singapore-headquartered student housing platform Oxfordcaps has raised $8 Mn in Series A funding, led by Times Internet with participation from existing investors Kalaari Capital and Silicon Valley-based 500 Startups.</p>
+                                   <h6>26 Mar, 2019</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div><div class="slick-slide" data-slick-index="12" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide212">
+                          <div class="d-md-flex ">
+                             <a class="card mb-0 border-0 mx-md-3 d-block they-said" target="blank" href="https://tech.economictimes.indiatimes.com/news/startups/student-housing-company-oxfordcaps-raises-8m-led-by-times-internet/68577708" tabindex="-1"><!--style="width: 18rem;"-->
+                                <img style="width: 100%;" class="card-img-top" src="https://oxfordcaps.liveabuzz.com/oxford_api/uploads/media/3_media" alt="image-1">
+                                <div class="card-bot p-4 outline-0">
+                                  <h5 class="para">Student housing company Oxfordcaps raises $8M led by Times Internet</h5>
+                                  <p>Student housing company Oxfordcaps has raised $8 million in Series A funding led by Times Internet*. The round also saw participation from existing investors Kalaari Capital and 500 Startups.</p>
+                                   <h6>26 Mar, 2019</h6>
+                                  <span target="blank" class="link">Read More</span>
+                                 
+                                </div>
+                             </a>
+                            </div>
+                        </div></div></div>
+                                          		
+                                          		
+                                          		
+                                          		
+                                          		
+                                          		
+                                          		
+                                          		
+                                          		
+                                          		
+                                          		
+                                          		
+                                            
+                    
+                        
+                 <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;" aria-disabled="false">Next</button></div>
+               </div>
+  </section>
+

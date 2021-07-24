@@ -1,0 +1,101 @@
+<div class="row border rounded mt-1">
+    <div class="col-md-12 pt-3 pb-3">
+        <div class="table-responsive">
+            
+             <table *ngIf="payments?.length!=0" id="paymentListDetails" class="table table-striped table-bordered dt-responsive nowrap table-sm" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Payment Status</th>
+                        <th>Invoice</th>
+                    </tr>
+                </thead>
+
+                <tbody >
+                     <!-- <tr *ngFor="let in of counter(this.bedCount) ;let i = index">  -->
+                    <tr *ngFor="let payment of payments; index as i">
+                        <td>{{payment.transactionId}}</td>
+                        <td>{{payment.responseDateTime | date: 'MMM d, y'}}</td>
+                        <td>{{payment.paidAmount | currency}}</td>
+                        <td class="text-center">
+                            <span class="badge rounded-pill text-white" [ngSwitch]="payment?.paymentStatus">
+                                <strong style="font-size: larger" class="badge badge-warning" *ngSwitchCase='0'>Pending</strong>
+                                <strong style="font-size: larger" class="badge badge-success" *ngSwitchCase='1'>Success</strong>
+                                <strong style="font-size: larger" class="badge badge-warning" *ngSwitchCase='2'>Cancel</strong>
+                                <strong style="font-size: larger"class="badge badge-danger" *ngSwitchCase='3'>Expired</strong>
+                                <strong style="font-size: larger" class="badge badge-danger" *ngSwitchCase='4'>Fail</strong>
+                                <strong style="font-size: larger" class="badge badge-danger" *ngSwitchCase='5'>Duplicate</strong>
+                                <strong style="font-size: larger" class="badge badge-danger" *ngSwitchCase='6'>Rejected</strong>
+                                <strong style="font-size: larger" class="badge badge-warning" *ngSwitchCase='7'>Unconfirmed</strong>
+                                <strong style="font-size: larger" class="badge badge-warning" *ngSwitchDefault>Fail</strong>
+                            </span>
+                        </td>
+                        <td ><button *ngIf="payment?.paymentStatus=='1'" type="button" (click)="goToLink(payment)" class="btn btn-primary"><img src="../../../../assets/customimage/download.png" class="img-fluid"></button></td>
+                        
+                       
+                    </tr>
+                </tbody>
+
+            </table> 
+            <div *ngIf="payments?.length==0" class="text-center">
+                <h2 class="my-1 text-muted">No Payments Present.</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div *ngIf="guests.length==0" class="text-center">
+    <h2 class="my-1 text-muted">No Booking Present.</h2>
+</div> -->
+
+<!-- <div class="row border rounded mt-5">
+    <div class="col-md-12 pt-3 pb-3">
+        <h1 class="datail_title mb-2">Guest Details</h1>
+        <div class="table-responsive">
+            <table id="upcommingbooking" class="table table-striped table-bordered dt-responsive nowrap table-sm" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Guest</th>
+                        <th>Guest Name</th>
+                        <th>Bed Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>097645324453-1</td>
+                        <td>
+                            <select class="form-control">
+                                <option>---Select Guest---</option>
+                                <option>Himanshu</option>
+                                <option>Amit</option>
+                            </select>
+                        </td>
+                        <td>Himanshu</td>
+                        <td>Male Upper</td>
+                        <td><button class="btn btn-primary">Attach to Booking</button></td>
+                    </tr>
+                    <tr>
+                        <td>097645324453-2</td>
+                        <td>
+                            <select class="form-control">
+                                <option>---Select Guest---</option>
+                                <option>Himanshu</option>
+                                <option>Amit</option>
+                            </select>
+                        </td>
+                        <td>Amit</td>
+                        <td>Male Upper</td>
+                        <td><button class="btn btn-primary">Attach to Booking</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="add_more text-right">
+            <a href="#" data-toggle="modal" data-target="#createguest"><i class="plus_icon">+</i> Add More Guest</a>
+        </div>
+    </div>
+</div> -->

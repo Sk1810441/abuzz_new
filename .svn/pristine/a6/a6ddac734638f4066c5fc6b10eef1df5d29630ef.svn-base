@@ -1,0 +1,112 @@
+<div >
+    <div class="modal-dialog modal-lg modal-width">
+      <div class="modal-content border-0">
+
+        <div class="d-flex flex-wrap">
+          <div class="col-md-6 col-sm-6 p-0 ">
+            <div class="login-bg h-100 colored-bg">
+              <button type="button" class="close d-block d-sm-none" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <img class="login-logo" src="https://oxfordcaps.com/assets-website/images/oxford-svglog.svg" width="140"
+                height="25" alt="log">
+              <h3>Hey there!</h3>
+              <p>Login now, and find your favorite residence.</p>
+              <img class="img-man d-none d-sm-block" src="https://oxfordcaps.com/assets-website/images/man.png"
+                alt="man-icon">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <button type="button" class="close d-none d-sm-block" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+            <div class="login-section">
+
+              <h2 class="mt-0 d-sm-block d-none"> <a href="#" data-toggle="modal" data-target="#myModal" class="mr-2">
+                  <img class="" src="https://oxfordcaps.com/assets-website/images\back-arrow.png"
+                    alt="back-icon"></a>Sign Up</h2>
+              <h6 class="mt-4">Sign up with</h6>
+              <p class="mb-4">
+                <img src="https://oxfordcaps.com/assets-website/images/icons/facebook.svg" alt="fb-icon"
+                  class="facebook">
+                <img src="https://oxfordcaps.com/assets-website/images/icons/google.svg" alt="google-icon"
+                  class="google"><!-- class="ml-3" -->
+              </p>
+              <hr class="mb-4">
+              <!--  <h6 class="mt-4">Login with</h6> -->
+
+              <form class="form-group your-mail formvalidation" id="signup_form" onsubmit="checkvalidate()">
+                <span id="#signup-error"></span>
+                <label for="exampleInputEmail1">or create a profile </label>
+                <div class="form-group">
+                  <input type="text" class="form-control  mt-3" name="first_name"
+                    onkeypress="return AllowAlphabet(event)" id="exampleInputFname1" aria-describedby="emailHelp"
+                    placeholder="Enter your First name" required data-bv-notempty-message="First name is required">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control mt-3" name="last_name" onkeypress="return AllowAlphabet(event)"
+                    id="exampleInputLname1" aria-describedby="emailHelp" placeholder="Enter your Last name" required
+                    data-bv-notempty-message="Last name is required">
+                </div>
+                <div class="form-group  visit ">
+
+                  <div class="form-group  ">
+                    <div class="d-flex">
+                      <div class="country-select">
+                        <!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#otp-modal" style="background-color: red;">
+Open modal
+</button>  -->
+                        <select class="w-100 selectpicker " id="exampleFormControlSelect1">
+                          <option
+                            data-content="<span> <img src='https://oxfordcaps.com/assets-website/images/flag.png' alt='logo' selected> +91</span>">
+                          </option>
+
+                        </select>
+
+                      </div>
+                      <input required="required" type="text" onkeypress="return isNumberKeyevent(event)" maxlength="10"
+                        onblur="checkMoblieLength('student_mobile');checkEmailMobile(this.value);" placeholder="Mobile"
+                        class="form-control ml-2" id="student_mobile" name="student_mobile" placeholder="">
+                    </div>
+                  </div>
+                  <span id="pwd_msg" style="color: red;font-size: 12px;font-family: SharpSansNo1-Book"></span>
+                  <span id="msg" style="color: #e55d68;font-size: 12px;font-family: SharpSansNo1-Book"></span>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" class="form-control"
+                    onblur="checkEmailExists(this.value),checkemail('exampleInputEmail1')" name="signupemail"
+                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required
+                    data-bv-notempty-message="The username is required">
+                  <span id="email_msg" style="color: red;font-size: 12px;font-family: SharpSansNo1-Book"></span>
+                  <span id="email_msg1" style="color: #e55d68;font-size: 12px;font-family: SharpSansNo1-Book"></span>
+                </div>
+
+
+                <div class="form-group">
+                  <input type="password" class="form-control mt-3" name="signuppassword" id="exampleInputPwd1"
+                    aria-describedby="emailHelp" placeholder="Password" required
+                    data-bv-notempty-message="Password is required">
+                </div>
+                <span id="signup_msg" style="color: red;font-size: 12px;"></span>
+                <!-- onclick="signup()"  -->
+                <p class="signup-terms mt-4">By Signing up, you agree<br> with Oxfordcaps<a
+                    href="https://oxfordcaps.com/terms_condition">Terms and Conditions</a></p>
+                <div class="text-center">
+                  <button type="submit" class="btn  text-white btn-blue mt-3" id="singup_btn">Sign UP</button>
+                </div>
+              </form>
+
+              <p class="no-account mt-4 mb-5 text-center">Already have an account? <a href="#" data-toggle="modal"
+                  data-target="#myModal">Log in</a></p>
+
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>

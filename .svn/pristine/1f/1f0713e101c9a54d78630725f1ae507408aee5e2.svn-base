@@ -1,0 +1,122 @@
+<div class="sub-header bg-white">
+    <div class="sub-banner-top">
+        <!-- <h4>Voila! You have <span id="p_count"></span> residences to choose from. You can customize your search here.</h4> -->
+        <div class="banner-bottom">
+            <div class="box ">
+                <ul class="mobile-sub-head row m-0">
+                    <li class="nav-item caret col-md-4 row m-0">
+                        <label class="col-md-2">City</label>
+                        <!-- <select class="form-control" style="border-radius: 25px;"  #city (change)="cityChange(city.value)">
+                            <option value="" selected="true">Select City</option>
+                            <option *ngFor="let city of cities | keyvalue" value="{{city.value}}">{{city.value}}</option>
+                        </select> -->
+                        <ng-multiselect-dropdown class="col-md-10"
+                            [placeholder]="'Select City'"
+                            [settings]="dropdownSettings3"
+                            [data]="cities"
+                            [disabled]="disabled"
+                            (onSelect)="onItemSelect($event)"
+                            (onDeSelect)="onItemDeSelect($event)"
+                            [(ngModel)]="selectedcities">
+                        </ng-multiselect-dropdown>
+                    </li>
+                     <li class="nav-item caret col-md-4 row m-0" id="universityfilter">
+                        <label class="col-md-2">Location</label>
+                        <!-- <select class="form-control" style="border-radius: 25px;" #location (change)="locationChange(location.value)">
+                            <option value="">Select Location</option>
+                            <option *ngFor="let citylocation of citylocation | keyvalue" value="{{citylocation.value}}" >{{citylocation.value}}</option>
+                        </select>  -->
+                        <ng-multiselect-dropdown class="col-md-10"
+                            [placeholder]="'Select Location'"
+                            [settings]="dropdownSettings"
+                            [data]="citylocation"
+                            [disabled]="disabled"
+                            (onSelect)="onItemSelectLocation($event)"
+                            (onDeSelect)="onItemDeSelectLocation($event)"
+                            [(ngModel)]="selectedlocations">
+                        </ng-multiselect-dropdown>
+                    </li> 
+                    <li class="nav-item caret col-md-4 row m-0" id="genderfilter">
+                        <label class="col-md-2">gender</label>
+                        <!-- <select class="form-control col-md-10" style="border-radius: 25px;" #gender (change)="genderChange(gender.value)">
+                            <option value="" selected>Select gender</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                            <option value="UniGender">UniGender</option>
+                        </select> -->
+                        <ng-multiselect-dropdown class="col-md-10 singleselect"
+                            [placeholder]="'Select Gender'"
+                            [settings]="dropdownSettings2"
+                            [data]="genders"
+                            [disabled]="disabled"
+                            (onSelect)="onItemSelectGender($event)"
+                            (onDeSelect)="onItemDeSelectGender($event)"
+                            [(ngModel)]="selectedGender">
+                        </ng-multiselect-dropdown>
+                    </li>
+                    <!-- <li class="nav-item d-flex d-xs-mb-4 d-sm-mb-4  caret monthsselect">
+                        <label class="home-in pr-2 pt-1">and move in by</label>
+                        <select class="form-control" style="border-radius: 25px;">
+                        <option value='' selected>Select Month</option>
+                        <option value='Jan'>Jan</option>
+                        <option value='Feb'>Feb</option>
+                        <option value='Mar'>Mar</option>
+                        <option value='Apr'>Apr</option>
+                        <option value='May'>May</option>
+                        <option value='Jun'>Jun</option>
+                        <option value='Jul'>Jul</option>
+                        <option value='Aug'>Aug</option>
+                        <option value='Sep'>Sep</option>
+                        <option value='Oct'>Oct</option>
+                        <option value='Nov'>Nov</option>
+                        <option value='Dec'>Dec</option>
+                        </select>
+                    </li> -->
+                    <!-- <li  class="nav-item d-flex d-xs-mb-4 d-sm-mb-4  caret monthsselect">
+                        <label class="home-in pr-2 pt-1">and move in by</label>
+                        <mat-date-range-input [rangePicker]="picker">
+                            <input matStartDate placeholder="Start date">
+                            <input matEndDate placeholder="End date">
+                        </mat-date-range-input>
+                        <mat-date-range-picker #picker></mat-date-range-picker>
+                    </li> -->
+                    <!-- <li class="nav-item d-flex d-xs-mb-4 d-sm-mb-4 whitebg bg caret">
+                        <label class="home-in pr-2 pt-1">budget</label>
+                        <div class="dropdown carot-style">
+                        <button class="btn btn-primary dropdown-toggle price-slider" type="button" data-toggle="dropdown">
+                            <span class="price-value">Enter Price range</span>
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right slider-drop">
+                            <div class="slider-content">
+                            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                            <div id="slider-range" class="price-range-slider">
+                                <div class="ui-slider-handle handle1"></div>
+                                <div class="ui-slider-handle handle2"></div>
+
+                            </div>
+                            <div class="range">
+                                <ul class="d-flex pl-0 justify-content-between">
+                                <li>0</li>
+                                <li>10</li>
+                                <li>20</li>
+                                <li>30</li>
+                                <li>40</li>
+                                <li>50</li>
+                                <li>60+</li>
+                                </ul>
+                            </div>
+                            <div class="mt-3">
+                                <button type="button" class="btn btn-primary float-right apply-btn pt-2"
+                                id="apply-range">Apply</button>
+                                <button type="button" class="btn btn-link float-right cncl-btn">Cancel</button>
+                            </div>
+                            </div>
+                        </ul>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
