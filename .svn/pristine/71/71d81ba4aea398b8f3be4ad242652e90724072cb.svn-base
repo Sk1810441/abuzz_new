@@ -1,0 +1,45 @@
+
+<td>{{bookingDetail?.masterBookingId}}</td>
+<td>{{bookingDetail?.requestDate | date: 'MMM d, y'}}</td>
+<td>{{bookingDetail?.checkinDate | date: 'MMM d, y'}}</td>
+<td>{{bookingDetail?.checkoutDate | date: 'MMM d, y'}}</td>
+<td>{{bookingDetail?.guests.length}}</td>
+<td class="text-right">{{bookingDetail?.totalAmount | currency }}</td>
+<td class="text-center">
+    <span class="badge rounded-pill text-white" [ngSwitch]="bookingDetail?.bookingStatus">
+        <strong class="badge badge-info" *ngSwitchCase='0'>Arrival Due</strong>
+        <strong class="badge badge-success" *ngSwitchCase='1'>In House</strong>
+        <strong class="badge badge-danger" *ngSwitchCase='2'>Cancelled</strong>
+        <strong class="badge badge-info" *ngSwitchCase='3'>Departed</strong>
+        <strong class="badge badge-info" *ngSwitchCase='4'>Early Departured </strong>
+        <strong class="badge badge-danger" *ngSwitchCase='5'>System Error </strong>
+        <strong class="badge badge-danger" *ngSwitchCase='6'>Cancelled by admin </strong>
+        <strong class="badge badge-warning" *ngSwitchCase='7'>Pending</strong>
+        <strong class="badge badge-warning" *ngSwitchCase='8'>Pending</strong>
+        <strong class="badge badge-info" *ngSwitchCase='9'>Overstayed departured </strong>
+        <strong class="badge badge-info" *ngSwitchCase='10'>No show</strong>
+        <strong class="badge badge-warning" *ngSwitchCase='11'>Overstayed</strong>
+        <strong class="badge badge-secondary" *ngSwitchCase='12'>No show expired</strong>
+        <strong class="badge badge-secondary" *ngSwitchCase='13'>Expired</strong>
+        <strong class="badge badge-secondary" *ngSwitchCase='14'>Expired </strong>
+        <strong class="badge badge-danger" *ngSwitchCase='15'>Departured Excp (Cash) </strong>
+        <strong class="badge badge-danger" *ngSwitchCase='16'>Departured Excp (No Pay) </strong>
+        <strong class="badge badge-danger" *ngSwitchDefault>Booking status not available</strong>
+    </span>
+</td>
+<td class="text-center"><button (click)="bookingdetail(bookingDetail?.masterBookingId)" class="btn btn-transparent" title="View Booking Details"><img src="../../../../assets/customimage/view.png" class="w-50"></button>
+
+<!-- [bookingDetails]="bookingDetails"
+
+
+
+
+
+< <td>ATPL0745WER</td>
+<td>14-june-2021</td>
+<td>01-july-2021</td>
+<td>15-july-2021</td>
+<td>4</td>
+<td>8,000</td>
+<td class="text-center"><span class="badge rounded-pill bg-warning text-white">Pending</span></td>
+<td class="text-center"><button class="btn btn-primary"><img src="../../../../assets/customimage/download.png" class="img-fluid"></button></td> -->

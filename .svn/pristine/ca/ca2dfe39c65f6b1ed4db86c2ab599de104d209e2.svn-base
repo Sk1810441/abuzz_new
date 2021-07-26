@@ -29,8 +29,6 @@ export class EditProfileComponent implements OnInit, OnDestroy {
   loaded: boolean = false;
   error: boolean = false;
   form = new FormGroup({});
-  show:boolean=true;
-  notshow:boolean=false;
 
   constructor(private profileRespo: profileRepository, private authService: AuthService, private store: Store, private datepipe: DatePipe) { }
   ngOnInit(): void {
@@ -63,10 +61,6 @@ export class EditProfileComponent implements OnInit, OnDestroy {
   }
   hide() {
     this.modalRef.hide();
-  }
-  alt(){
-   this.show=false;
-   this.notshow=true;
   }
   get f() {
     return this.form.controls;

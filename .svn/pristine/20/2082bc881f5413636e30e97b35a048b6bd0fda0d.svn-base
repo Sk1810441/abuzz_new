@@ -267,7 +267,7 @@ export class GuestdetailComponent implements OnInit {
     let GuestNumberArray = this.GuestNumberArray.find(x => x.GuestNumber == GuestNumber);
     let bedTypeId = GuestNumberArray.bedTypeId;
     let bedTypesList = this.bedTypesList?.find(x => x.id == bedTypeId);
-    this.modalRef.content.imagesList=  bedTypesList?.mainImage;
+    this.modalRef.content.imagesList=  bedTypesList?.imagesList;
     this.modalRef.content.uniqueid = 0;
   }
 

@@ -37,7 +37,7 @@ export class Location {
 export class bedTypesList{
     id: number | undefined;
     bedPosition: string | undefined;
-    imagesList: string[] | undefined;
+    mainImage: string[] | undefined;
     bedTypeName: string | undefined;
     bedFor :string | undefined;
     displayName:string | undefined;
