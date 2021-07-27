@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { guests } from '../models/bookingdetail';
 import { profileDetails} from '../models/user-details';
 
 
@@ -16,6 +17,13 @@ export class DataService {
   updatedData(data: profileDetails){
     this.dataSource.next(data);
   }
+  private contentguest = new BehaviorSubject<guests>(new guests());
+  public shareguest = this.contentguest.asObservable();
+
+  updateguest(guest:guests){
+    this.contentguest.next(guest);
+  }
+
 
   private contentlocation = new BehaviorSubject<string[]>([]);
   public sharelocation = this.contentlocation.asObservable();

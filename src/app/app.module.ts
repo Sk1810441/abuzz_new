@@ -79,13 +79,15 @@ import { BookingdetailComponent } from './templates/layouts/bookingdetail/bookin
 import { PaymentdetailsComponent } from './templates/components/paymentdetails/paymentdetails.component';
 import { BookingguestdetailsComponent } from './templates/components/bookingguestdetails/bookingguestdetails.component';
 import { AddguestComponent } from './templates/components/addguest/addguest.component';
-import { EditProfileComponent } from './templates/components/edit-profile/edit-profile.component';
+import { EditProfileComponent } from './templates/popup/edit-profile/edit-profile.component';
 import { LocationrouterComponent } from './templates/routercomponents/locationrouter/locationrouter.component';
 import { HostelrouterComponent } from './templates/routercomponents/hostelrouter/hostelrouter.component';
 import { ProfilerouterComponent } from './templates/routercomponents/profilerouter/profilerouter.component';
 import { BookinghistoryrouterComponent } from './templates/routercomponents/bookinghistoryrouter/bookinghistoryrouter.component';
 import { DatePipe } from '@angular/common';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { CancelconfirmationComponent } from './templates/popup/cancelconfirmation/cancelconfirmation.component';
+
 
 
 @NgModule({
@@ -134,6 +136,7 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     HostelrouterComponent,
     ProfilerouterComponent,
     BookinghistoryrouterComponent,
+    CancelconfirmationComponent,
     // SigninComponent,
     // SigninotpComponent,
     // SigninsuccessComponent

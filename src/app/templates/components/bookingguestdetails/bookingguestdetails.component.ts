@@ -4,6 +4,10 @@ import { guests, Payments, userContacts } from '../../../store/models/bookingdet
 import { AuthService } from '../../../store/services/auth.service';
 import { BookingService } from '../../../store/services/booking.service';
 import { environment } from '../../../../environments/environment';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { CancelconfirmationComponent } from '../../popup/cancelconfirmation/cancelconfirmation.component';
+import { DataService } from 'src/app/store/services/data.service';
+import { AddguestComponent } from '../addguest/addguest.component';
 
 @Component({
   selector: 'app-bookingguestdetails',
@@ -21,10 +25,12 @@ export class BookingguestdetailsComponent implements OnInit {
   jwtToken : string | undefined;
   source : number | undefined;
   userid : number | undefined;
+  modalRef: any;
   disable:boolean = false;
   selectedGuestId:Number=0;
+  //cancelBookingSelectedGuest:guests | undefined;
 
-  constructor(private bookindService:BookingService, private authService : AuthService,private toastr: ToastrService) { }
+  constructor(private bookindService:BookingService, private authService : AuthService,private toastr: ToastrService,private modalService: BsModalService,private dataservice:DataService) { }
 
   ngOnInit(): void {
     this.jwtToken = String(this.authService.getjwtToken());
@@ -91,38 +97,19 @@ export class BookingguestdetailsComponent implements OnInit {
   }
 
   cancelBooking(guest:guests){
-    // console.log(guest);
-    const obj = {
-      "jwtToken":this.jwtToken,
-      "masterBookingId":guest.masterBookingId,
-      "cancelReason":"",
-      "source":this.source,
-      "guests":[{
-        "bookingId":guest.bookingId
-      }]
-    }
-    // console.log(obj);
-    this.bookindService.cancelBooking(obj,Number(this.userid)).subscribe(
-      data => {
-        if(data.statusDescription.statusCode == 200){
-          this.toastr.success("Booking Cancel Successful", '', { timeOut: 5000,});
-          window.location.reload();
-        }else{
-          this.toastr.error(data.statusDescription.statusMessage, '', { timeOut: 5000,});
-        }
-        // console.log("data"+ JSON.stringify(data));
-      },
-      error => {
-        this.toastr.error("Something wents wrong", '', { timeOut: 5000,});
-        // console.log("error"+ JSON.stringify(error));
-      })
-
-
+    this.dataservice.updateguest(guest);
   }
-
+popup(){
+  this.modalRef = this.modalService.show(CancelconfirmationComponent);
+  this.modalRef.content.modalRef = this.modalRef;
+}
 
   goToLink(payment: Payments){
     window.open(payment.receiptLink);
+  }
+  show(){
+    this.modalRef = this.modalService.show(AddguestComponent);
+    this.modalRef.content.modalRef = this.modalRef;
   }
   
 }

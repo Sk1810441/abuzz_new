@@ -2,7 +2,7 @@ import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { profileDetails } from 'src/app/store/models/userprofile';
-import { EditProfileComponent } from '../edit-profile/edit-profile.component';
+import { EditProfileComponent } from '../../popup/edit-profile/edit-profile.component';
 
 
 

@@ -31,10 +31,14 @@ export class EditProfileComponent implements OnInit, OnDestroy {
   form = new FormGroup({});
   show:boolean=true;
   notshow:boolean=false;
+  maxDate:any;
 
   constructor(private profileRespo: profileRepository, private authService: AuthService, private store: Store, private datepipe: DatePipe) { }
   ngOnInit(): void {
     this.isAlive = true;
+    const currentYear = new Date().getFullYear();
+    this.maxDate = new Date(currentYear - 18, 11, 31);
+
     const getProfileData$ = this.store.select(fromProfile.getProfileDetails);
     getProfileData$.pipe(takeWhile(() => this.isAlive)).subscribe(data => {
       this.userDetails = data;
@@ -87,7 +91,7 @@ export class EditProfileComponent implements OnInit, OnDestroy {
     updateprofiledata$.pipe(takeWhile(() => this.isAlive)).subscribe(userDetails => {
       this.loaded = true;
       this.loading = false;
-     // this.dataService.updatedData(userDetails);
+    // this.dataService.updatedData(userDetails);
       if (userDetails?.name) {
         this.authService.updateisuserlogin(userDetails?.name);
         localStorage.setItem(EncryDecryUtility.set(environment.key, 'username'), EncryDecryUtility.set(environment.key, String(userDetails?.name)));

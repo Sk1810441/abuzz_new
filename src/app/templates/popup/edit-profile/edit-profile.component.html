@@ -47,7 +47,7 @@
                         <div class="form-group">
                             <label>DOB</label>
                             <input type="text" id="dob" name="dob"
-                                placeholder="Enter Date Of Birth" class="form-control" bsDatepicker
+                                placeholder="Enter Date Of Birth" class="form-control" bsDatepicker [maxDate]="maxDate"
                                 [bsConfig]="{dateInputFormat: 'MMM D, YYYY'}" autocomplete="off" formControlName="dob" >
                             <div *ngIf="f.dob.touched && f.dob.invalid">
                                 <div *ngIf="f.dob.errors?.required">
